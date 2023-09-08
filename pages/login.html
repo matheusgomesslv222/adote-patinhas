@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Adicione os links para os arquivos CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Personalize as cores aqui */
+        body {
+            background-color: #5d6b90; /* Cor de fundo da página */
+        }
+
+        .card {
+            background-color: #DBDFEA; /* Cor de fundo do card */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra do card */
+        }
+
+        .card-header {
+            background-color: #8294C6; /* Cor de fundo do cabeçalho do card */
+            color: #fff; /* Cor do texto do cabeçalho do card */
+        }
+
+        .btn-primary {
+            background-color: #8294C6; /* Cor de fundo do botão "Entrar" */
+            border-color: #007bff; /* Cor da borda do botão "Entrar" */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cor de fundo do botão "Entrar" ao passar o mouse */
+            border-color: #0056b3; /* Cor da borda do botão "Entrar" ao passar o mouse */
+        }
+
+        /* Adicione mais estilos personalizados conforme necessário */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Nome de usuário ou Email:</label>
+                                <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário ou email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione os links para os arquivos JavaScript do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
