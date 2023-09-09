@@ -5,23 +5,43 @@
     box-sizing: border-box;
 }
 
-.text{
+.container {
     display: flex;
-    flex: 1px;
-    text-align: center;
-    margin: 30px;
+    align-items: center;
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.imagem {
+    max-width: 300px; /* Defina o tamanho máximo da imagem conforme necessário */
+}
+.container{
+    width: 100%;
+}
+
+.text{
+    float:right;
+    width: 0 0 0 0;
+    top: 60px;
     background-color: #8294c68c;
     padding: 20px;
     border-radius: 10px;
     -webkit-box-shadow: 7px 2px 39px -10px rgba(0,0,0,0.9);
     -moz-box-shadow: 7px 2px 39px -10px rgba(0,0,0,0.9);
     box-shadow: 7px 2px 39px -10px rgba(0,0,0,0.9);
-
 }
-.imgen{
-    display: flex;
-    max-width: 200px;
 
+h1{
+    text-align: center;
+    position: fixed; 
+    top: 60px;
+    left: 25%; 
+    width: 50%; 
+    color: #333 /* Cor do texto */
+     
 }
 
 .navbar{
