@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 .container {
     display: flex;
     align-items: center;
@@ -44,59 +45,41 @@ h1{
      
 }
 
+/*Nav-Bar Styles*/
 .navbar{
-    display: flex;
-    width: 100%;
-    max-height: 80px;
-    background-color: #8294C6 ;
-}
-.navbar button{
-   margin-left: 20px;
-}
-@media (max-width: 480px) {
-    .navbar{
-        display: flex;
-        align-content: center;   
-        width: 100%;
-        height: 70px; 
-    }
-  }
-  
-.navbar img{
-    width: 70px;
-}
-.user-buttons{
-    display: flex;
-    flex-direction: flex-end;
-    gap: 20px;
-}
-.user{
-    margin-right: 20px;
-}
-.navbar i{
+    max-height: 60px;
     color: #DBDFEA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    border: 1px solid #DBDFEA;
-    font-size: 1.5rem;
+    background-color: #8294C6;
 }
-.forms{
-    display: flex;
-    gap: 5px;
+.logo{
+    max-width: 100px;
 }
-.forms input{
-    width: 500px;
+.form input{
+    width: 400px;
+    
+}
+.form button{
+    margin-left: 10px;
+    border-color: #DBDFEA;
+    color: #DBDFEA;
 }
 
-.forms button{
-    color: #DBDFEA;
-    border-color: #DBDFEA;
-}
-.forms button:hover{
+.form button:hover{
     border-color: #5d6b90;
     background-color: #5d6b90;
 }
+.nav-link i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #DBDFEA;
+    color: #DBDFEA;
+}
+.nav-link i:hover{
+    border-color: #5d6b90;
+    background-color: #5d6b90;
+}
+/*Nav-Bar Styles*/
