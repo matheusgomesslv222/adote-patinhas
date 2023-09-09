@@ -16,7 +16,6 @@
     width: 400px;
     
 }
-
 .form button{
     margin-left: 10px;
     border-color: #DBDFEA;
@@ -27,7 +26,6 @@
     border-color: #5d6b90;
     background-color: #5d6b90;
 }
-
 .nav-link i{
     display: flex;
     justify-content: center;
@@ -38,7 +36,6 @@
     border: 1px solid #DBDFEA;
     color: #DBDFEA;
 }
-
 .nav-link i:hover{
     border-color: #5d6b90;
     background-color: #5d6b90;

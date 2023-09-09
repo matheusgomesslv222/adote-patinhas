@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #5d6b90; /* Cor de fundo da página */
+}
+
+.card {
+    background-color: #DBDFEA; /* Cor de fundo do card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra do card */
+}
+
+.card-header {
+    background-color: #8294C6; /* Cor de fundo do cabeçalho do card */
+    color: #fff; /* Cor do texto do cabeçalho do card */
+}
+
+.btn-primary {
+    background-color: #8294C6; /* Cor de fundo do botão "Entrar" */
+    border-color: #007bff; /* Cor da borda do botão "Entrar" */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo do botão "Entrar" ao passar o mouse */
+    border-color: #0056b3; /* Cor da borda do botão "Entrar" ao passar o mouse */
+}

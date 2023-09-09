@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
+
+.navbar {
+    background-color: #ffe600;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.navbar-brand {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: #333;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+}
+
+.btn-primary {
+    background-color: #ffa200;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ff8100;
+}
+
+.product-image {
+    max-height: 150px;
+    object-fit: cover;
+}
