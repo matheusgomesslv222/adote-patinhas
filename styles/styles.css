@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 #main{
     width: 100%;
 }
@@ -77,27 +80,35 @@
 /*Categorias*/
 
 /*card-group*/
-#card-group{
-    margin: 40px 0;
-    overflow-x: scroll;
+#list-card{
+    width: 100%; /* Defina a largura total da seção */
+    max-width: 1200px; /* Defina a largura máxima desejada para o conteúdo */
+    margin: 40px auto; /* Centralize a seção horizontalmente */
+    overflow-x: auto; /* Adicione uma barra de rolagem horizontal quando necessário */
+    white-space: nowrap; /* Evita que o conteúdo quebre para a próxima linha */
+    display: flex; /* Use flex para manter o mesmo tamanho dos cartões */
+    justify-content: flex-start; /* Alinhe os cartões à esquerda */
+}
+.card-groups{
+    display: flex;
+}
+.card{
+    cursor: pointer;
+    margin: 0 5px; /* Aplique margem entre os cartões */
+    width: 200px; /* Defina a largura dos cartões */
+    height: 300px; /* Defina a altura dos cartões */
 }
 .card-list{
     display: flex;
-    width: 500px;
-    overflow-x: scroll;
-}
-.card{
-    display: flex;
     justify-content: center;
-    width: 200px;
-    margin: 0 5px;
 }
 .card img{
-    width: auto;
-    height: 100px;
+    
 }
 .card-body{
-    height: 150px;
+    display: flex;
+    width: 100%;
+    white-space: initial;
 }
 /*card-group*/
 
