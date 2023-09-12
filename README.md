@@ -1,30 +1,28 @@
-﻿## Nome dos Integrandes
-
 ### Grupo Desenvolvimento Web :
 
-Matheus Gomes da Silva | RA : 202302382071
+-Matheus Gomes da Silva | RA : 202302382071
 
-Rodrigo dos Santos Silveiras Filho | RA : 202302381162
+-Rodrigo dos Santos Silveiras Filho | RA : 202302381162
 
-Isabella Martins de Souza | RA : 202302378961
+-Isabella Martins de Souza | RA : 202302378961
 
-Felipe Augusto Teixeira Moreira | RA : 202302382207
+-Felipe Augusto Teixeira Moreira | RA : 202302382207
 
-Julio Mathias Toledo da Silveira | RA :202302379125
+-Julio Mathias Toledo da Silveira | RA :202302379125
 
 ### Grupo de Paradigmas de Linguagem de Programação : 
 
-Matheus Gomes da Silva | RA : 202302382071
+-Matheus Gomes da Silva | RA : 202302382071
 
-Rodrigo dos Santos Silveiras Filho | RA : 202302381162
+-Rodrigo dos Santos Silveiras Filho | RA : 202302381162
 
-Isabella Martins de Souza | RA : 202302378961
+-Isabella Martins de Souza | RA : 202302378961
 
-Felipe Augusto Teixeira Moreira | RA : 202302382207
+-Felipe Augusto Teixeira Moreira | RA : 202302382207
 
-Julio Mathias Toledo da Silveira | RA :202302379125
+-Julio Mathias Toledo da Silveira | RA :202302379125
 
-Matheus Augusto Pereira Ribeiro | RA : 202303664206
+-Matheus Augusto Pereira Ribeiro | RA : 202303664206
 
 ## Descrição do Projeto
 
