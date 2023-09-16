@@ -26,5 +26,11 @@
 
 ## Descrição do Projeto
 
-O projeto "BookMapper" tem como objetivo proporcionar aos usuários uma solução eficaz para unificar o conhecimento de sua biblioteca em um único sistema. Utilizando uma pesquisa avançada, nossa plataforma permite que os usuários consultem uma ampla variedade de tópicos, tornando mais fácil do que nunca explorar e acessar o vasto acervo de informações disponíveis.
+O projeto "BookMapper" tem como objetivo proporcionar aos usuários uma solução eficaz para unificar o conhecimento de sua biblioteca em um único sistema. Utilizando uma pesquisa avançada, nossa plataforma permite que os usuários consultem uma ampla variedade de tópicos, tornando mais fácil xplorar e acessar o vasto acervo de informações disponíveis.
+
+
+## Cores do Projeto
+
+-Cor Principal : #0097B2
+
 
