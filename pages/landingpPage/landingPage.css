@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,53 +10,63 @@ body {
     margin: 0 auto;
     padding: 40px;
     text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-img {
-    max-width: 100%;
+header img {
+    max-width: 150px;
     border-radius: 50%;
 }
 
-h1 {
+header h1 {
     font-size: 36px;
     color: #333;
+    margin: 10px 0;
 }
 
-p {
+header p {
     font-size: 18px;
     color: #777;
 }
 
-ul {
+.contact-info ul,
+.social-media ul {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.contact-info li,
+.social-media li {
     margin-bottom: 10px;
 }
 
-a {
+.social-media strong {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.social-media a {
     text-decoration: none;
     color: #007BFF;
 }
 
-a:hover {
+.social-media a:hover {
     text-decoration: underline;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 20px;
+.bio h2 {
+    font-size: 24px;
+    color: #333;
     margin-top: 20px;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+.bio p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.5;
 }
