@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+
+    <title>Registro do Usuário</title>
+</head>
+<body>
+        <div class="container">
+            <h1>Registro do Usuário</h1>
+
+            <!--Formulario de Registro-->
+            <div id="registroForm">
+                          
+                <form action="processar_registro.php" method="POST">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <br>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <br>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <br>
+                    <input type="submit" value="Registrar">
+                </form>
+                    <br>
+                    <a href="paginda_de_destino.html" onclick="mostrarFormularioLogin()">Já tem cadastro? Clique aqui!</a><br>
+                </div>
+            </div>
+       <script src="cadastro.js"></script>
+    </body>
+    </html>
+    
