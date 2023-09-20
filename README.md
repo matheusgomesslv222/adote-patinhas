@@ -31,6 +31,7 @@ O projeto "BookMapper" tem como objetivo proporcionar aos usuários uma soluçã
 
 ## Cores do Projeto
 
--Cor Principal : #0097B2
+-Cores: #0097B2 #C4DFDF #D2E9E9 #E3F4F4 #F8F6F4
+        
 
 
