@@ -1,0 +1,33 @@
+    body {
+            width: 1280px;
+            height: 54px;
+            margin: 0 auto;
+            background-color: #d9d9d9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .divider {
+            width: 920px;
+            height: 5px;
+            background-color: #007bff; /* Cor de fundo do divisor */
+            position: absolute;
+            top: 119px;
+            left: 180px;
+        }
+        .ellipse {
+            width: 184px;
+            height: 181px;
+            background-color: #d9d9d9; /* Cor de fundo da elipse */
+            position: absolute;
+            top: 157px;
+            left: 195px;
+            border-radius: 50%;
+        }
