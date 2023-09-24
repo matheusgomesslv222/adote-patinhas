@@ -13,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-</head>
 <body>
     <header>
       <nav class="navbar">
@@ -26,22 +25,44 @@
       <div class="meus-livros">
           <div class="search-bar">
             <p>Meus Livros</p>
-                <form class="form" action="">
-                  <input type="text" name="search" id="search">
-                  <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form class="form">
+                    <input type="text" name="search" id="search">
+                    <button type="button" class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-              <div class="nova-estante">
                 <div class="user">
-                  <button><a href="./public/pages/LoginPage/LoginPage.html"><i class="fa-regular fa-user"></i></a></button>
+                  <button ><i class="fa-regular fa-user"></i></button>
                 </div>
-              </div><!--nova-estante-->
             </div><!--search-bar-->
             <div class="divisor"></div><!--divisor-->
       </div><!--meus-livros-->
-      
+        <div class="minhas-estantes">
+            <p>Estante 1</p>
+            <div class="estantes">
+                <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+
+                </div>
+              </div><!--card-->
+
+              <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+                </div>
+              </div><!--card-->
+
+              <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+                </div>
+              </div><!--card-->
+          </div>
+
+          
+        </div><!--minhas-estantes-->
     </main><!--main-container--> 
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/b2dc027b84.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="./HomePageFunctions.js"></script>
 </body>
 </html>
