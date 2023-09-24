@@ -11,7 +11,7 @@ app.use(cors());
 
 import router from './routes.js'
 app.use(router);
-createTable();
+//createTable();
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=>console.log('servidor on'))
