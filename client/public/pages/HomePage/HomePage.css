@@ -158,6 +158,17 @@ body{
         display: flex;
         margin-top: 5px;
     }
+    
+    
+    
+}
+
+.barra-lateral{
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid;
+
+}
     .form{
         width: auto;
     }
@@ -171,11 +182,23 @@ body{
         
     }
     
-  }
+  
   @media (min-width: 1200px){
     #main-container{
         width: 70%;
     }
+  }
+  .main-content{
+    display: flex;
+    margin-top: 20px;
+  }
+  .estantes {
+
+    text-align: center;
+    
+
+
+
   }
 /*Media QUery*/
 /*MAIN*/
