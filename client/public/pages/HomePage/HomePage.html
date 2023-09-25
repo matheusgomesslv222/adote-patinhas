@@ -25,8 +25,9 @@
       <div class="meus-livros">
           <div class="search-bar">
             <p>Meus Livros</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inserirLivroModal">
-              Inserir Livro
+            <!-- Botão "Adicionar Estante" -->
+            <button type="button" class="btn btn-success" id="adicionarEstanteBtn">Adicionar Estante</button>
+
             </button>            
             <form class="form">
                     <input type="text" name="search" id="search">
@@ -38,25 +39,65 @@
             </div><!--search-bar-->
             <div class="divisor"></div><!--divisor-->
       </div><!--meus-livros-->
-        <div class="main-content">
-          <div class="barra-lateral">
-            <div class="lateral">
-              <br>
-              <h5>Minha Estante</h5>
-              <h5>Atualmente Lendo</h5>
-              <h5>Quero Ler</h5>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inserirLivroModal">
-                ADD ESTANTE
-              </button>   
-          </div><!--Lateral-->
-          </div><!--barra-lateral-->
+        <div class="minhas-estantes">
+            <p>Estante 1</p>
+            <div class="estantes">
+                <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+
+                </div>
+              </div><!--card-->
+
+              <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+                </div>
+              </div><!--card-->
+
+              <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                <div class="card-body">
+                </div>
+              </div><!--card-->
+          </div>
+
           
-          <div class="estantes">
-            <h3>Estante 1</h3>
-          </div><!--estantes-->
-      
-        </div>
-      </main><!--main-container--> 
+        </div><!--minhas-estantes-->
+    </main><!--main-container--> 
+
+    <!-- Modal de Inserção de Livros -->
+<div class="modal fade" id="inserirLivroModal" tabindex="-1" role="dialog" aria-labelledby="inserirLivroModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inserirLivroModalLabel">Inserir Livro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulário de Inserção de Livros -->
+        <form enctype="multipart/form-data" action="processar_envio.php" method="post">
+          <div class="form-group">
+            <label for="pdfFile">Upload de PDF:</label>
+            <input type="file" class="form-control-file" name="pdfFile" id="pdfFile">
+          </div>
+          <div class="form-group">
+            <label for="url">URL do Livro:</label>
+            <input type="url" class="form-control" name="url" id="url">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+<form enctype="multipart/form-data" action="processar_envio.php" method="post" id="inserirLivroForm">
 
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/b2dc027b84.js" crossorigin="anonymous"></script>
