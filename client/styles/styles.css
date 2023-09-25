@@ -61,8 +61,7 @@ body {
     background-color: #8a9ac0;
     padding: 0.4rem 1rem;
     border-radius: 5px;
-    cursor: pointer;
-    
+    cursor: pointer
 }
 
 .login-button button:hover {
@@ -186,7 +185,6 @@ body {
 @media screen and (max-width: 1064px) {
     .container {
         width: 90%;
-        height: auto;
     }
     .input-group {
         flex-direction: column;
@@ -211,14 +209,27 @@ body {
 }
 
 /*Login-Page*/
+.form-header{
+    max-width: 500px;
+}
 .login-input-group {
-   display: block;
-   width: 500px;
-   
+    display: flex;
+    justify-content: center;
 }
 
 .login-input-box{
-    margin: 0 auto;
     width: 300px;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .input-group-login{
+        
+    }
 }
 /*Login-Page*/

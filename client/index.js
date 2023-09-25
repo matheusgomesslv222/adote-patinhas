@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </form>
         `
-        
         const getButtonLogin = document.querySelector('.btn');
         getButtonLogin.addEventListener('click', () => {
             renderingLogin();
@@ -99,21 +98,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         numero_telefone: numero_telefone,
                         senha: senha,
                     }
+        //Envio das infos para o Axios 
                     const URL = 'http://localhost:3000/cadastro-usuario'
-                    axios.post(URL, usuario)
-                        .then(response =>{
-                            console.log('Resposta do Servidor: ' , response.data);
-                        })
-                        .catch(error =>{
-                            console.error('Erro na solicitação', error);
-                        })
-                });
+                        axios.post(URL, usuario)
+                            .then(response =>{
+                                console.log('Resposta do Servidor: ' , response.data);
+                            })
+                            .catch(error =>{
+                                console.error('Erro na solicitação', error);
+                            })
+                    });
     }
     
     const renderingLogin = ()=>{
         const registerLayout = document.querySelector('.form').innerHTML = `
             <form action="#">
-                <div class="form-header">
+                <div class="form-header form-header-login">
                     <div class="title">
                         <h1>Login</h1>
                     </div>
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
     
-                <div class="input-group">
+                <div class="input-group-login">
                     <div class="input-box">
                         <label for="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
@@ -132,12 +132,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
+                    <div class="continue-button">
+                        <button id="login-button"><a href="#">Login</a></button>
+                    </div>
                 </div>           
-                <div class="continue-button">
-                    <button><a href="#">Login</a></button>
-                </div>
             </form>
         `
+        const container = document.querySelector('.container')
+        container.style.width = '500px';
+        container.style.heigh = '300px';
+
         const getButtonRegister = document.querySelector('.register-btn');
         getButtonRegister.addEventListener('click', () => {
             renderingRegister();
@@ -160,7 +164,40 @@ document.addEventListener('DOMContentLoaded', () => {
         loginInput.forEach(input => {
             input.classList.add('login-input-box');
         });
-    }
+
+
+        const loginAuth = document.getElementById('login-button');
+                loginAuth.addEventListener('click', () => {
+                    const email = document.getElementById('email').value;
+                    const senha = document.getElementById('password').value;
+
+                    const usuario = {
+                        email: email,
+                        senha: senha,
+                    }
+                    
+                    //Envio das infos para o Axios 
+                    const URL = 'http://localhost:3000/login'
+                        axios.post(URL, usuario)
+                            .then(response =>{
+                                console.log('Resposta do Servidor: ' , response.data);
+                            })
+                            .catch(error =>{
+                                console.error('Erro na solicitação', error);
+                            })
+                    });
+
+                    //Recebimento de dados
+                    const URL = 'http://localhost:3000/login'
+                        axios.get(URL, response)
+                            .then(response =>{
+                                if (row) {
+                                    // Redirecione o usuário para a página desejada
+                                    window.location.href = './public/pages/HomePage/HomePage.html'; // Substitua pelo URL da página desejada
+                                }
+                            }) //PAREI AQUI NA CRIAÇÂO DO redirecionamento
+
+    } 
     renderingRegister();
 
 });

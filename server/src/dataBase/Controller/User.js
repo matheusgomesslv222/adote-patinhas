@@ -15,3 +15,24 @@ export async function insertUsuario(usuario){
          db.run('INSERT INTO User (nome , sobrenome , email , numero_telefone, senha) VALUES (?, ?, ?, ?, ?)', [usuario.nome , usuario.sobrenome, usuario.email, usuario.numero_telefone, usuario.senha]);
     })
 }
+
+export async function authUser(req, res){
+    const usuario = {
+        email : req.body.email,
+        senha : req.body.senha
+    }
+    await openDb().then(db=>{
+        db.get('SELECT * FROM User WHERE email=? AND senha=?', [usuario.email , usuario.senha])
+        .then(row => {
+            if(row){
+                res.status(200).json({message: 'Auth bem-sucedida'});
+            }else {
+                res.status(401).json({message: 'Credenciais invalidas'})
+            }
+        })
+        .catch(err =>{
+            console.error(err);
+            res.status(500).json({message:"Erro interno no servidor"})
+        })
+    });
+ }
