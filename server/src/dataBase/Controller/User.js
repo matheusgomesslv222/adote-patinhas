@@ -1,4 +1,6 @@
 import { openDb } from "../configDb.js";
+import jwt from 'jsonwebtoken';
+import crypto from 'crypto';
 
 export async function createTable(){
     openDb().then(db=>{
@@ -16,6 +18,8 @@ export async function insertUsuario(usuario){
     })
 }
 
+const secretKey = crypto.randomBytes(32).toString('hex');
+
 export async function authUser(req, res){
     const usuario = {
         email : req.body.email,
@@ -25,7 +29,9 @@ export async function authUser(req, res){
         db.get('SELECT * FROM User WHERE email=? AND senha=?', [usuario.email , usuario.senha])
         .then(row => {
             if(row){
-                res.status(200).json({message: 'Auth bem-sucedida'});
+                const token = jwt.sign({ email: usuario.email }, secretKey, { expiresIn: '1h' });
+
+                res.status(200).json({message: 'Auth bem-sucedida', token});
             }else {
                 res.status(401).json({message: 'Credenciais invalidas'})
             }

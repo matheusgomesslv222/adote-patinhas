@@ -221,15 +221,5 @@ body {
     width: 300px;
 }
 
-@media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 1064px) {
-    .input-group-login{
-        
-    }
-}
 /*Login-Page*/
