@@ -133,10 +133,19 @@ body{
    min-height: 250px;
    border-radius: 8px;
 }
+
+.barra-lateral{
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid;
+
+}
 /*EStantes*/
+
+
 /*Media QUery*/
 @media (max-width: 768px) {
-    /* Mostra o input apenas em dispositivos móveis */
+
     header {
       display: none;
     }
@@ -163,12 +172,6 @@ body{
     
 }
 
-.barra-lateral{
-    width: 200px;
-    height: 100vh;
-    border-right: 1px solid;
-
-}
     .form{
         width: auto;
     }
@@ -192,13 +195,6 @@ body{
     display: flex;
     margin-top: 20px;
   }
-  .estantes {
 
-    text-align: center;
-    
-
-
-
-  }
 /*Media QUery*/
 /*MAIN*/

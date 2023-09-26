@@ -67,37 +67,37 @@
     </main><!--main-container--> 
 
     <!-- Modal de Inserção de Livros -->
-<div class="modal fade" id="inserirLivroModal" tabindex="-1" role="dialog" aria-labelledby="inserirLivroModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="inserirLivroModalLabel">Inserir Livro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <!-- Formulário de Inserção de Livros -->
-        <form enctype="multipart/form-data" action="processar_envio.php" method="post">
-          <div class="form-group">
-            <label for="pdfFile">Upload de PDF:</label>
-            <input type="file" class="form-control-file" name="pdfFile" id="pdfFile">
+    <div class="modal fade" id="inserirLivroModal" tabindex="-1" role="dialog" aria-labelledby="inserirLivroModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inserirLivroModalLabel">Inserir Livro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="form-group">
-            <label for="url">URL do Livro:</label>
-            <input type="url" class="form-control" name="url" id="url">
+          <div class="modal-body">
+            <!-- Formulário de Inserção de Livros -->
+            <form enctype="multipart/form-data" action="processar_envio.php" method="post">
+              <div class="form-group">
+                <label for="pdfFile">Upload de PDF:</label>
+                <input type="file" class="form-control-file" name="pdfFile" id="pdfFile">
+              </div>
+              <div class="form-group">
+                <label for="url">URL do Livro:</label>
+                <input type="url" class="form-control" name="url" id="url">
+              </div>
+            </form>
           </div>
-        </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
-      </div>
+      <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+      <form enctype="multipart/form-data" action="processar_envio.php" method="post" id="inserirLivroForm">
     </div>
-  </div>
-</div>
-<button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
-<form enctype="multipart/form-data" action="processar_envio.php" method="post" id="inserirLivroForm">
 
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/b2dc027b84.js" crossorigin="anonymous"></script>
