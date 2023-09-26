@@ -138,9 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>           
             </form>
         `
-        const container = document.querySelector('.container')
-        container.style.width = '500px';
-        container.style.heigh = '300px';
+        
 
         const getButtonRegister = document.querySelector('.register-btn');
         getButtonRegister.addEventListener('click', () => {
