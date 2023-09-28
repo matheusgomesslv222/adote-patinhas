@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="./HomePage.css">
+    <!--BootStrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <h3>Book Mapper</h3> 
+        </div>
+      </nav>
+    </header>
+    <main id="main-container">
+      <div class="nav-bar-livros">
+          <div class="search-bar">
+            <p>Meus Livros</p>
+            <!-- Botão "Adicionar Estante" -->
+            <button type="button" class="btn btn-success" id="adicionarEstanteBtn">Adicionar Estante</button>
+
+            </button>            
+            <form class="form">
+                    <input type="text" name="search" id="search">
+                    <button type="button" class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div class="user">
+                  <button ><a href="./public/pages/PerfilPage/Perfil.html"><i class="fa-regular fa-user"></i></a></button>
+                </div>
+            </div><!--search-bar-->
+            <div class="divisor"></div><!--divisor-->
+      </div><!--nav-bar-livros-->
+      <div class="main-content">
+        <div class="barra-lateral">
+          
+        </div><!--barra-lateral-->
+        <div class="minhas-estantes">
+              <p>Estante 1</p>
+              <div class="estantes">
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+  
+                      </div>
+                    </div><!--card-->
+  
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+  
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+  
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+  
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+  
+                  <div class="card">
+                      <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                      <div class="card-body">
+                      </div>
+                  </div><!--card-->
+              </div>
+        </div><!--minhas-estantes-->
+      </div>
+      
+    </main><!--main-container--> 
+
+    <!-- Modal de Inserção de Livros -->
+    <div class="modal fade" id="inserirLivroModal" tabindex="-1" role="dialog" aria-labelledby="inserirLivroModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inserirLivroModalLabel">Inserir Livro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Formulário de Inserção de Livros -->
+            <form enctype="multipart/form-data" action="processar_envio.php" method="post">
+              <div class="form-group">
+                <label for="pdfFile">Upload de PDF:</label>
+                <input type="file" class="form-control-file" name="pdfFile" id="pdfFile">
+              </div>
+              <div class="form-group">
+                <label for="url">URL do Livro:</label>
+                <input type="url" class="form-control" name="url" id="url">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+          </div>
+        </div>
+      </div>
+      <button type="submit" form="inserirLivroForm" class="btn btn-primary">Enviar Livro</button>
+      <form enctype="multipart/form-data" action="processar_envio.php" method="post" id="inserirLivroForm">
+    </div>
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/b2dc027b84.js" crossorigin="anonymous"></script>
+    <script src="./HomePageFunctions.js"></script>
+</body>
+</html>
