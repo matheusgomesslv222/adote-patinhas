@@ -229,3 +229,19 @@ body{
 .barra-lateral li {
     margin-bottom: 10px; /* Espaçamento entre os itens da lista */
 }
+/*Card*/
+.Capas img{
+    width: 200px;
+    height: 300px;
+    }
+
+.Capas {
+    display: flex;
+    gap: 10px;
+
+}    
+
+h3{
+border-bottom: 1px solid black;
+
+}
