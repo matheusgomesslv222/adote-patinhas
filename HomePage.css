@@ -211,3 +211,17 @@ body{
 /*ESTANTES MEDIA QUERY*/
 /*Media QUery*/
 /*MAIN*/
+
+.custom-button {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    cursor: pointer; /* Cursor de apontador ao passar o mouse */
+    border-radius: 4px; /* Borda arredondada */
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
