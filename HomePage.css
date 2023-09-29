@@ -212,6 +212,41 @@ body{
 /*Media QUery*/
 /*MAIN*/
 
+/*Barra lateral*/
+.barra-lateral {
+    width: 250px; /* Largura da barra lateral */
+    height: 100vh; /* Altura da barra lateral */
+    background-color: #f2f2f2; /* Cor de fundo da barra lateral */
+    padding: 20px; /* Espaçamento interno */
+    border-right: 1px solid black; /* Adiciona uma borda de 1px à direita */
+}
+
+.barra-lateral ul {
+    list-style-type: none; /* Remova os marcadores de lista */
+    padding: 0;
+}
+
+.barra-lateral li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+/*Card*/
+.Capas img{
+    width: 200px;
+    height: 300px;
+    }
+
+.Capas {
+    display: flex;
+    gap: 10px;
+
+}    
+
+h3{
+border-bottom: 1px solid black;
+
+}
+
+
 .custom-button {
     background-color: #007bff; /* Cor de fundo */
     color: #fff; /* Cor do texto */
