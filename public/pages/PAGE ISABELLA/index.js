@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <label for="confirmPassword">Confirme sua Senha</label>
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
                     </div>
-    
+
                 </div>
     
                 <div class="gender-inputs">
