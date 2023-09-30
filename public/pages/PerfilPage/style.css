@@ -70,3 +70,36 @@ a{
     gap: 20px;
 }
 
+@media (max-width: 500px){
+    .navbar{
+        height: auto;
+    }
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .main h1{
+        display: block;
+        width: 100%;
+    }
+    .barra-lateral{
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+    .barra-lateral img{
+        width: 50%;
+    }
+    .perfil{
+       
+        display: flex;
+        flex-direction: column;
+    }
+    .biografia input{
+       width: 300px;
+       height: 250px;
+    }
+}
+
