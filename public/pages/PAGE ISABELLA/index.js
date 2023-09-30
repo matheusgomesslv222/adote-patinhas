@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
     
                 <div class="continue-button">
-                    <button id="cadastro-feito"><a href="#">Continuar</a> </button>
+                    <button id="cadastro-feito"><a href="../../../index.html">Continuar</a> </button>
                 </div>
             </form>
         `
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
                     <div class="continue-button">
-                        <button id="login-button"><a href="./public/pages/HomePage/HomePage.html">Login</a></button>
+                        <button id="login-button"><a href="../../../index.html">Login</a></button>
                     </div>
                 </div>           
             </form>
