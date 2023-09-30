@@ -1,72 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Mapper</title>
-    <style>
-        body {
-            width: 1280px;
-            height: 54px;
-            margin: 0 auto;
-            background-color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        .divider {
-            width: 920px;
-            height: 5px;
-            background-color: #d9d9d9; /* Cor de fundo do divisor */
-            position: absolute;
-            top: 119px;
-            left: 180px;
-        }
-        .ellipse {
-            width: 184px;
-            height: 181px;
-            background-color: #d9d9d9; /* Cor de fundo da elipse */
-            position: absolute;
-            top: 157px;
-            left: 195px;
-            border-radius: 50%;
-        }
-        .text {
-            width: 51px;
-            height: 23px;
-            position: absolute;
-            top: 361px;
-            left: 261px;
-            font-family: "Times Ne Roman", Times, serif;
-            font-size: 16px;
-            color: #000000; /* Cor do texto */
-        }
-        .text {
-            width: 178px;
-            height: 23px;
-            top: 409px;
-            left: 201px;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            color: #000000; /* Cor do texto*/
-
-        }
-    </style>
+    <title>Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Book Mapper</h1>
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <h3><a href="../../../index.html">Book Mapper</a></h3> 
+          </div>
+        </nav>
+      </header>
+    <div class="main">
+        <h1>Seu Perfil</h1>
+        <div class="perfil">
+            <div class="barra-lateral">
+                <img src="https://source.unsplash.com/random/250x250/" alt="">
+                <h2>Nome</h2>
+                <h3>Nome da Instituição</h3>
+    
+                <h3>Curso</h3>
+            </div>
+            <div class="main-content-perfil">
+                <div class="biografia">
+                    <h3>Biografia</h3>
+                    <input type="text">
+                </div><!--biografia-->
+                <div class="redes-sociais">
+                    <h3>Redes Sociais</h3>
+                    <div>
+                        <label>Facebook</label>
+                        <input type="text" name="Facebook" id="Facebook">
+
+                        <label>Instagram</label>
+                        <input type="text" name="Instagram" id="Instagram"> 
+
+                        <label>Twitter</label>
+                        <input type="text" name="Twitter" id="Twitter">
+
+                        <label>Linkedin</label>
+                        <input type="text" name="Linkedin" id="Linkedin">
+
+                        <label>Email</label>
+                        <input type="text" name="Email" id="Email">
+                    </div>
+                            
+
+                </div><!--redes-sociais-->
+            </div><!--main-content-perfil-->
+            
+        </div>
     </div>
-    <div class="divider"></div>
-    <div class="ellipse"></div>
-    <div class="text">Nome</div>
-    <div class="text">Nome da Instituição</div>
+    
+
 </body>
 </html>

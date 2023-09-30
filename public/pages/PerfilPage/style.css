@@ -1,33 +1,72 @@
-    body {
-            width: 1280px;
-            height: 54px;
-            margin: 0 auto;
-            background-color: #d9d9d9;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        .divider {
-            width: 920px;
-            height: 5px;
-            background-color: #007bff; /* Cor de fundo do divisor */
-            position: absolute;
-            top: 119px;
-            left: 180px;
-        }
-        .ellipse {
-            width: 184px;
-            height: 181px;
-            background-color: #d9d9d9; /* Cor de fundo da elipse */
-            position: absolute;
-            top: 157px;
-            left: 195px;
-            border-radius: 50%;
-        }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Nav-bar Styles*/
+a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    width: 100%;
+    height: 40px;
+    padding: 0 200px;
+    background-color: #8a9ac0;
+    color: white;
+}
+.nav-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.navbar button {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+/*Nav-bar Styles*/
+.main{
+    width: 70%;
+    margin: 0 auto;
+}
+.main h1{
+    border-bottom: 5px solid grey;
+}
+.perfil{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.barra-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    border-right: 1px solid black;
+}
+.barra-lateral img{
+    border-radius: 50%;
+}
+.main-content-perfil{
+    padding: 40px;
+}
+.biografia input{
+    width: 600px;
+    height: 500px;
+}
+.redes-sociais div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+

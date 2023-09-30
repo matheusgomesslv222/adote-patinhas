@@ -24,68 +24,114 @@
     <main id="main-container">
       <div class="nav-bar-livros">
           <div class="search-bar">
-            <p>Meus Livros</p>
+            <h2>Meus Livros</h2>
             <form class="form">
                     <input type="text" name="search" id="search">
                     <button type="button" class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+            </form>
                 <div class="user">
                   <button ><a href="./public/pages/PerfilPage/Perfil.html"><i class="fa-regular fa-user"></i></a></button>
                 </div>
             </div><!--search-bar-->
             <div class="divisor"></div><!--divisor-->
       </div><!--nav-bar-livros-->
+      <div class="Content">
+        <div class="barra-lateral">
+            <h2 class="title-minhas-estantes">Minhas Estantes</h2>
+            <ul>
+                <li><a href="#">Atualmente lendo</a></li>
+                <li><a href="#">Quero ler</a></li>
+            </ul>
+            <button id="" class="custom-button">Criar Estante</button>
+        </div><!--barra-lateral-->
+        <div class="minhas-estantes">
+          <h3>Estante 1</h3>
+          <i class="fa-solid fa-plus"></i>
+          <div class="estantes">
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
 
-      <button id="createShelfButton" class="custom-button">Criar Estante</button>
+                  </div>
+                </div><!--card-->
 
-      <div id="bookshelves"></div>
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
 
-<div class="Content">
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
 
-  <div class="barra-lateral">
-    <h2>Minhas Estantes</h2>
-    <ul>
-        <li><a href="#">Atualmente lendo</a></li>
-        <li><a href="#">Quero ler</a></li>
-    </ul>
-    <button>Adicionar Estantes</button>
-</div>  
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
 
-</div>
-    
-  </div>
-  <h3>Resultados da pesquisa</h3>
-  <div class="Capas">
-    
-    <div class="livro">
-      <img src="https://m.media-amazon.com/images/I/61zBhzjS4LL._AC_UF1000,1000_QL80_.jpg" alt="">
-      <div class="card-content">
-          <h3>Livro</h3>
-        </div>   
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
 
-    </div>          
-   <div class="livro">
-    <img src="https://a-static.mlcdn.com.br/450x450/livro-a-lenda-dos-guardioes-o-guia-da-grande-arvore-ga-hoole/caminhodaleitura/2553/8900e32e04e8ddb1233b3b3ab7e29ec9.jpg" alt="">
-    <div class="card-content">
-        <h3>Livro</h3>
+              <div class="card">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                  <div class="card-body">
+                  </div>
+              </div><!--card-->
+          </div><!--estantes-->
+    </div><!--minhas-estantes-->
 
-   
-      </div>
-      </div>
-    <div class="livro">
-        <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
-        <div class="card-content">
-            <h3>Livro</h3>
-          </div>   
-  
-      </div>      
-  </div>
+        <!-- <div class="resultado-pesquisa">
+            <h3 class="pesquisa">Resultados da pesquisa</h3>
+            <div class="Capas">
+              <div class="livro">
+                <img src="https://m.media-amazon.com/images/I/61zBhzjS4LL._AC_UF1000,1000_QL80_.jpg" alt="">
+                <div class="card-content">
+                    <h3>Livro</h3>
+                </div>   
 
+            </div>        
+            <div class="livro">
+              <img src="https://a-static.mlcdn.com.br/450x450/livro-a-lenda-dos-guardioes-o-guia-da-grande-arvore-ga-hoole/caminhodaleitura/2553/8900e32e04e8ddb1233b3b3ab7e29ec9.jpg" alt="">
+              <div class="card-content">
+                <h3>Livro</h3>
+              </div>
+            </div>
+            <div class="livro">
+                <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
+                <div class="card-content">
+                    <h3>Livro</h3>
+                </div>   
+            </div>
+            
+            <div class="livro">
+              <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
+              <div class="card-content">
+                  <h3>Livro</h3>
+              </div>   
+          </div>
 
-      
+          <div class="livro">
+            <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
+            <div class="card-content">
+                <h3>Livro</h3>
+            </div>   
+        </div>
+            </div> 
+        </div> resultado-pesquisa -->
+      </div><!--Content-->
     </main><!--main-container--> 
-
-
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/b2dc027b84.js" crossorigin="anonymous"></script>
     <script src="./HomePageFunctions.js"></script>
