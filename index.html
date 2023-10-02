@@ -12,6 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Importe o Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 <body>
     <header>
@@ -27,7 +29,7 @@
             <h2>Meus Livros</h2>
             <form class="form">
                     <input type="text" name="search" id="search">
-                    <button type="button" class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="button" class="button-search" onclick="searchBooks()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
                 <div class="user">
                   <button ><a href="./public/pages/PAGE ISABELLA/login.html"><i class="fa-regular fa-user"></i></a></button>
@@ -44,7 +46,7 @@
             </ul>
             <button id="" class="custom-button">Criar Estante</button>
         </div><!--barra-lateral-->
-        <div class="minhas-estantes">
+        <div id="minhas-estantes">
           <h3>Estante 1</h3>
           <i class="fa-solid fa-plus"></i>
           <div class="estantes">
@@ -55,81 +57,10 @@
                   </div>
                 </div><!--card-->
 
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
-
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
-
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
-
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
-
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-              </div><!--card-->
+              
           </div><!--estantes-->
     </div><!--minhas-estantes-->
 
-        <!-- <div class="resultado-pesquisa">
-            <h3 class="pesquisa">Resultados da pesquisa</h3>
-            <div class="Capas">
-              <div class="livro">
-                <img src="https://m.media-amazon.com/images/I/61zBhzjS4LL._AC_UF1000,1000_QL80_.jpg" alt="">
-                <div class="card-content">
-                    <h3>Livro</h3>
-                </div>   
-
-            </div>        
-            <div class="livro">
-              <img src="https://a-static.mlcdn.com.br/450x450/livro-a-lenda-dos-guardioes-o-guia-da-grande-arvore-ga-hoole/caminhodaleitura/2553/8900e32e04e8ddb1233b3b3ab7e29ec9.jpg" alt="">
-              <div class="card-content">
-                <h3>Livro</h3>
-              </div>
-            </div>
-            <div class="livro">
-                <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
-                <div class="card-content">
-                    <h3>Livro</h3>
-                </div>   
-            </div>
-            
-            <div class="livro">
-              <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
-              <div class="card-content">
-                  <h3>Livro</h3>
-              </div>   
-          </div>
-
-          <div class="livro">
-            <img src="https://m.media-amazon.com/images/I/419ebAR2eeL._SY445_SX342_.jpg" alt="">
-            <div class="card-content">
-                <h3>Livro</h3>
-            </div>   
-        </div>
-            </div> 
-        </div> resultado-pesquisa -->
       </div><!--Content-->
     </main><!--main-container--> 
     <!--FontAwesome-->

@@ -127,12 +127,12 @@ body{
     width: 250px;
     height: 100vh;
 }
-.minhas-estantes{
+#minhas-estantes{
     width: calc(100% - 250px);
     padding-top: 20px;
     padding-left: 20px;
 }
-.minhas-estantes h3{
+#minhas-estantes h3{
     display: inline-flex;
     border-bottom: 1px solid black;
     width: 300px;
@@ -155,7 +155,7 @@ body{
    min-height: 250px;
    border-radius: 8px;
 }
-.minhas-estantes i{
+#minhas-estantes i{
     display: none;
 }
 /*EStantes*/
@@ -188,11 +188,11 @@ body{
         margin-top: 5px;
     }
 
-    .minhas-estantes{
+    #minhas-estantes{
         padding: 0;
         width: 100%;
     }
-    .minhas-estantes i{
+    #minhas-estantes i{
         border-radius: 8px;
         justify-content: center;
         align-items: center;
@@ -231,7 +231,7 @@ body{
 
 /*ESTANTES MEDIA QUERY*/
 @media (min-width: 1200px){
-    .minhas-estantes{
+    #minhas-estantes{
         height: 500px;
     }
 }
@@ -285,7 +285,7 @@ body{
 }
 .resultado-pesquisa .pesquisa{
     margin-left: 10px;
-    width: 500px;
+    width: 100%;
     display: inline-flex;
     border-bottom: 1px solid black;
 }
@@ -296,11 +296,31 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px;
+    width: 100%;
+}
+.livro{
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 160px;
+    max-height: 400px;
+    cursor: pointer;
+}
+.livro:hover{
+    background-color: rgb(181, 181, 181);
 }
 .livro img{
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 150px;
+    max-height: 200px;
+}
+
+.livro p{
+    white-space: wrap;  /* Impede que o texto quebre em várias linhas */
+    overflow: hidden;     /* Oculta qualquer texto que ultrapasse o contêiner */
+    text-overflow: ellipsis;  /* Adiciona três pontos (...) para indicar que o texto foi truncado */
 }
 /*Capas*/
 
