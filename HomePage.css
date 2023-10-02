@@ -67,13 +67,19 @@ a{
     height: 30px;
     margin-right: 0 auto
 }
+
 #search{
     width: 400px;
     height: auto;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border: none;
-    background-color:  #8a9ac0;
+    border: 1px solid black;
+    background-color:  white;
+    padding: 0 5px;
+}
+#search:focus{
+    border: 2px solid red;
 }
 .button-search{
     color: white;
