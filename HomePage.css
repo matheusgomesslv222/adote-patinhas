@@ -9,6 +9,10 @@ body{
     
 }
 /*Nav-bar Styles*/
+a{
+    text-decoration: none;
+    color: white;
+}
 .navbar{
     width: 100%;
     height: 40px;
