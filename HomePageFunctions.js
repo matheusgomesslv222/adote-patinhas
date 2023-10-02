@@ -126,7 +126,7 @@ async function searchBooks() {
             imagem.src = volumeInfo.imageLinks.thumbnail;
           } else {
             // Adiciona um placeholder quando a capa não está disponível
-            imagem.src = 'https://source.unsplash.com/random/130x200/'; // Substitua com o caminho real do seu placeholder
+            imagem.src = './public/img/istockphoto-489807343-1024x1024.jpg'; // Substitua com o caminho real do seu placeholder
           }
       
           livroDiv.appendChild(imagem);
