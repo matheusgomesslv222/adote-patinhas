@@ -108,7 +108,7 @@ async function searchBooks() {
       
         const renderSearch = document.getElementById('minhas-estantes');
         renderSearch.innerHTML = `<div class="resultado-pesquisa">
-                                    <p class="pesquisa">Resultado da pesquisa sobre ${query}</p>
+                                    <h4 class="pesquisa">Resultado da pesquisa sobre ${query}</h4>
                                     <div class="Capas"></div>
                                   </div><!--Resultado da Pesquisa-->`;
       
@@ -134,7 +134,7 @@ async function searchBooks() {
           const cardContent = document.createElement('div');
           cardContent.className = 'card-content';
       
-          const titulo = document.createElement('p');
+          const titulo = document.createElement('h4');
           titulo.textContent = volumeInfo.title || 'Título Indisponível';
           cardContent.appendChild(titulo);
       
