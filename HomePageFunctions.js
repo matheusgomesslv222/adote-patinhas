@@ -94,6 +94,64 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//Adiciona a função de pesquisa do google books
+// Adiciona a função de pesquisa do Google Books
+async function searchBooks() {
+    // Pesquisa
+    const query = document.getElementById('search').value;
+    const apiKey = 'AIzaSyDMWdsaQum9jNpDlIdokQk1ezfDcyvpqpM'; // Substitua pela sua chave de API
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`;
+  
+    try {
+        const response = await axios.get(apiUrl);
+        const books = response.data.items;
+      
+        const renderSearch = document.getElementById('minhas-estantes');
+        renderSearch.innerHTML = `<div class="resultado-pesquisa">
+                                    <p class="pesquisa">Resultado da pesquisa sobre ${query}</p>
+                                    <div class="Capas"></div>
+                                  </div><!--Resultado da Pesquisa-->`;
+      
+        const capasDiv = document.querySelector('.Capas');
+      
+        books.forEach(book => {
+          const volumeInfo = book.volumeInfo;
+          const livroDiv = document.createElement('div');
+          livroDiv.className = 'livro';
+      
+          const imagem = document.createElement('img');
+          imagem.alt = 'Capa do Livro';
+      
+          if (volumeInfo && volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) {
+            imagem.src = volumeInfo.imageLinks.thumbnail;
+          } else {
+            // Adiciona um placeholder quando a capa não está disponível
+            imagem.src = 'https://source.unsplash.com/random/130x200/'; // Substitua com o caminho real do seu placeholder
+          }
+      
+          livroDiv.appendChild(imagem);
+      
+          const cardContent = document.createElement('div');
+          cardContent.className = 'card-content';
+      
+          const titulo = document.createElement('p');
+          titulo.textContent = volumeInfo.title || 'Título Indisponível';
+          cardContent.appendChild(titulo);
+      
+          livroDiv.appendChild(cardContent);
+      
+          capasDiv.appendChild(livroDiv);
+        });
+      } catch (error) {
+        console.error('Erro ao chamar a API do GOOGLE BOOKS', error);
+      }
+      
+      
+  }
+  
+//Adiciona a função de pesquisa do google books
+
+
   
 
 
