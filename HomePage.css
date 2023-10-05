@@ -133,26 +133,26 @@ a{
     flex-direction: row;
     display: flex;
 }
-.barra-lateral{
-    width: 250px;
-    height: 100vh;
-}
+
 #minhas-estantes{
     width: calc(100% - 250px);
     padding-top: 20px;
     padding-left: 20px;
 }
+
 #minhas-estantes h3{
     display: inline-flex;
     border-bottom: 1px solid black;
     width: 300px;
 }
+
 .estantes{
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap;
 }
+
 .card{
     width: 10rem;
     margin-right: 10px;
@@ -160,14 +160,17 @@ a{
     height: 250px;
     margin: 15px 5px;
 }
+
 .card img{
-   width: 10rem;
-   min-height: 250px;
+   width: 150px;
+   min-height: 200px;
    border-radius: 8px;
 }
+
 #minhas-estantes i{
     display: none;
 }
+
 /*EStantes*/
 
 
@@ -272,6 +275,9 @@ a{
 
 .barra-lateral li {
     margin-bottom: 10px;
+}
+.barra-lateral a{
+    color: black;
 }
 
 .custom-button {
