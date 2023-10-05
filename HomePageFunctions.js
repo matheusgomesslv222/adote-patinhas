@@ -94,7 +94,6 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//Adiciona a função de pesquisa do google books
 // Adiciona a função de pesquisa do Google Books
 async function searchBooks() {
     // Pesquisa
@@ -141,15 +140,62 @@ async function searchBooks() {
           livroDiv.appendChild(cardContent);
       
           capasDiv.appendChild(livroDiv);
+
+          livroDiv.addEventListener('click', ()=>{
+            showBookModal(volumeInfo);
+          });
+          capasDiv.appendChild(livroDiv)
         });
       } catch (error) {
         console.error('Erro ao chamar a API do GOOGLE BOOKS', error);
       }
-      
-      
   }
   
 //Adiciona a função de pesquisa do google books
+
+//Função de abrir um modal na tela
+const showBookModal = (volumeInfo)=>{
+    const modal = new bootstrap.Modal(document.getElementById('bookModal'), {
+        
+    });
+
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    modalTitle.textContent = volumeInfo.title || 'Titulo Indisponivel';
+
+    // Adicione outras informações do livro conforme necessário
+    const autores = volumeInfo.authors ? volumeInfo.authors.join(', ') : 'Autor Indisponível';
+    modalBody.innerHTML = `<p><strong>Autores:</strong> ${autores}</p>
+                            <!-- Adicione mais informações do livro conforme necessário -->`;
+
+                            // Adicione a imagem da capa
+    const modalImage = document.createElement('img');
+    modalImage.alt = 'Capa do Livro';
+
+    if (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) {
+        modalImage.src = volumeInfo.imageLinks.thumbnail;
+    } else {
+        // Adicione um placeholder quando a capa não está disponível
+        modalImage.src = './public/img/istockphoto-489807343-1024x1024.jpg'; 
+        modalImage.style.width = '150px'
+        modalImage.style.height = '200px'
+    }
+
+    modalBody.innerHTML = '';
+    modalBody.appendChild(modalImage);
+
+    // Adicione a descrição do livro
+    const descricao = volumeInfo.description || 'Descrição Indisponível';
+    modalBody.innerHTML += `<p><strong>Descrição:</strong> ${descricao}</p>`;
+    modal.show();  
+
+    
+  }
+
+  
+
+//Função de abrir um modal na tela
 
 
   
