@@ -29,10 +29,6 @@
 O projeto "BookMapper" tem como objetivo proporcionar aos usuários uma solução eficaz para unificar o conhecimento de sua biblioteca em um único sistema. Utilizando uma pesquisa avançada, nossa plataforma permite que os usuários consultem uma ampla variedade de tópicos, tornando mais fácil xplorar e acessar o vasto acervo de informações disponíveis.
 
 
-## Cores do Projeto
-
--Cores: #0097B2 #C4DFDF #D2E9E9 #E3F4F4 #F8F6F4
-
 ## Link do [FIGMA] (https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670%3A107&mode=design&t=ukmo8QEMxyF7YBZ6-1)
         
 

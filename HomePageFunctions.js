@@ -135,6 +135,8 @@ async function searchBooks() {
       
           const titulo = document.createElement('h4');
           titulo.textContent = volumeInfo.title || 'Título Indisponível';
+          titulo.textContent = titulo.textContent.length > 20 ? titulo.textContent.substring(0 , 20) + "..." : titulo.textContent
+
           cardContent.appendChild(titulo);
       
           livroDiv.appendChild(cardContent);
@@ -192,8 +194,6 @@ const showBookModal = (volumeInfo)=>{
 
     
   }
-
-  
 
 //Função de abrir um modal na tela
 

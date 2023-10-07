@@ -44,6 +44,9 @@ a{
     height: 100vh;
     margin: 0 auto;
 }
+#main-container h2 a{
+    color: black;
+}
 /*search-bar*/
 .meus-livros{
     width: 100%;
@@ -154,10 +157,9 @@ a{
 }
 
 .card{
-    width: 10rem;
     margin-right: 10px;
     display: inline-block;
-    height: 250px;
+    height: 260px;
     margin: 15px 5px;
 }
 
@@ -329,14 +331,15 @@ a{
     background-color: rgb(181, 181, 181);
 }
 .livro img{
-    max-width: 150px;
-    max-height: 200px;
+    width: 150px;
+    height: 200px;
 }
-
-.livro p{
-    white-space: wrap;  /* Impede que o texto quebre em várias linhas */
-    overflow: hidden;     /* Oculta qualquer texto que ultrapasse o contêiner */
-    text-overflow: ellipsis;  /* Adiciona três pontos (...) para indicar que o texto foi truncado */
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+.modal-body img{
+    margin: 0 auto;
 }
 /*Capas*/
 

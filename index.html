@@ -28,7 +28,7 @@
     <main id="main-container">
       <div class="nav-bar-livros">
           <div class="search-bar">
-            <h2>Meus Livros</h2>
+            <h2><a href="./index.html">Meus Livros</a></h2>
             <form class="form">
                     <input type="text" name="search" id="search" placeholder="Pesquise um Livro"> <!--colocar uma opção para funcionar com o botão ENTER-->
                     <button type="button" class="button-search" onclick="searchBooks()"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -43,42 +43,44 @@
         <div class="barra-lateral">
             <h2 class="title-minhas-estantes">Minhas Estantes</h2>
             <ul>
-                <li><a href="#">Atualmente lendo</a></li> <!--Não aparece essas opção-->
-                <li><a href="#">Quero ler</a></li> <!--Não aparece essas opção-->
+                <li><a href="#">Atualmente lendo</a></li> 
+                <li><a href="#">Quero ler</a></li>
             </ul>
             <button id="" class="custom-button">Criar Estante</button> <!--Não está funcional-->
         </div><!--barra-lateral-->
         <div id="minhas-estantes">
-          <h3>Estante 1</h3>
-          <i class="fa-solid fa-plus"></i>
-          <div class="estantes">
-              <div class="card">
-                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                  <div class="card-body">
-                  </div>
-                </div><!--card-->
+            <h3>Estante 1</h3>
+            <i class="fa-solid fa-plus"></i>
+            <div class="estantes">
+                <div class="card">
+                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p>Titulo</p>
+                    </div>
+                  </div><!--card-->
 
-              
-          </div><!--estantes-->
-    </div><!--minhas-estantes-->
+                
+            </div><!--estantes-->
+        </div><!--minhas-estantes-->
 
       </div><!--Content-->
       <!-- Modal -->
-<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-      </div>
-      <div class="modal-body" id="modalBody">
-        <!-- O conteúdo do modal será preenchido dinamicamente com JavaScript -->
-      </div>
-    </div>
-  </div>
-</div>
+              </div>
+              <div class="modal-body" id="modalBody">
+                <!-- O conteúdo do modal será preenchido dinamicamente com JavaScript -->
+              </div>
+              
+            </div>
+          </div>
+        </div>
 
     </main><!--main-container--> 
 
