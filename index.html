@@ -52,14 +52,36 @@
             <h3>Estante 1</h3>
             <i class="fa-solid fa-plus"></i>
             <div class="estantes">
-                <div class="card">
+                <!-- <div class="card">
                     <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
                     <div class="card-body">
                       <p>Titulo</p>
                     </div>
-                  </div><!--card-->
+                  </div>card -->
 
-                
+                  <button id="add-book" data-bs-toggle="modal" data-bs-target="#addBookModal">+</i></button>
+                  <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="addBookModalLabel">Pesquisar e Adicionar Livro</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Input de pesquisa -->
+                          <input type="text" id="searchBookInput" placeholder="Digite o título do livro">
+                          
+                          <!-- Lista de livros -->
+                          <ul id="searchResults" class="list-group mt-3">
+                            <!-- Os resultados da pesquisa aparecerão aqui -->
+                          </ul>
+                          
+                          <!-- Botão de pesquisa e adição -->
+                          <button type="button" class="btn btn-primary mt-3" onclick="searchAndAddBook()">Pesquisar e Adicionar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div><!--estantes-->
         </div><!--minhas-estantes-->
 

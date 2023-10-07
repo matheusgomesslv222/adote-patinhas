@@ -197,6 +197,91 @@ const showBookModal = (volumeInfo)=>{
 
 //Função de abrir um modal na tela
 
+//adicionar e procurar livro a estante
+// Adicione este bloco de código ao seu script existente
+const livrosSelecionados = [];
+// Função para pesquisar e adicionar livro
+async function searchAndAddBook() {
+    // Obtenha o valor do input de pesquisa
+    const searchInput = document.getElementById('searchBookInput');
+    const query = searchInput.value;
+
+    // Se o campo de pesquisa estiver vazio, não faça a pesquisa
+    if (!query) {
+        return;
+    }
+
+    // Execute a pesquisa
+    const apiKey = 'AIzaSyDMWdsaQum9jNpDlIdokQk1ezfDcyvpqpM';
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`;
+
+    try {
+        const response = await axios.get(apiUrl);
+        const books = response.data.items;
+
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = ''; // Limpe os resultados anteriores
+
+        books.forEach(book => {
+            const volumeInfo = book.volumeInfo;
+
+            // Crie um item de lista para o livro
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+            // Crie uma imagem do livro
+            const bookImage = document.createElement('img');
+            bookImage.alt = 'Capa do Livro';
+            bookImage.style.maxWidth = '30px';
+
+            if (volumeInfo && volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) {
+                bookImage.src = volumeInfo.imageLinks.thumbnail;
+            } else {
+                // Adiciona um placeholder quando a capa não está disponível
+                bookImage.src = './public/img/istockphoto-489807343-1024x1024.jpg'; // Substitua com o caminho real do seu placeholder
+            }
+
+            // Adicione a imagem do livro ao item de lista
+            listItem.appendChild(bookImage);
+
+            // Crie um elemento de texto para o título do livro
+            const bookTitle = document.createElement('span');
+            bookTitle.textContent = volumeInfo.title || 'Título Indisponível';
+            bookTitle.textContent = bookTitle.textContent.length > 20 ? bookTitle.textContent.substring(0, 20) + "..." : bookTitle.textContent;
+
+            // Adicione o título do livro ao item de lista
+            listItem.appendChild(bookTitle);
+
+            // Adicione o item à lista de resultados
+            searchResults.appendChild(listItem);
+
+            listItem.addEventListener('click', () => {
+                // Aqui você pode chamar a função para adicionar o livro à estante
+                // Por exemplo, adicioneBookAoEstante(volumeInfo);
+                // Lembre-se de implementar a função addBookToShelf de acordo com sua lógica
+                // addBookToShelf(index, volumeInfo.title);
+            
+                // Feche o modal após adicionar o livro
+                const modalElement = document.getElementById('addBookModal');
+                if (modalElement) {
+                    modalElement.classList.remove('show'); // Remove a classe 'show' para esconder o modal
+                    modalElement.style.display = 'none'; // Define o estilo 'display' como 'none' para ocultar o modal
+                }
+            });
+            
+        });
+    } catch (error) {
+        console.error('Erro ao chamar a API do GOOGLE BOOKS', error);
+    }
+}
+
+// Adicione um evento de clique ao botão de pesquisa
+const searchButton = document.getElementById('searchButton');
+searchButton.addEventListener('click', searchAndAddBook);
+
+
+
+
 
   
 
