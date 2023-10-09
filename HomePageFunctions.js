@@ -1,45 +1,50 @@
-function criarEstante() {
-    const estanteContainer = document.querySelector(".estantes");
-    const novaEstante = document.createElement("div");
-    novaEstante.classList.add("card");
+// function criarEstante() {
+//     const estanteContainer = document.querySelector(".estantes");
+//     const novaEstante = document.createElement("div");
+//     novaEstante.classList.add("card");
 
-    // Conteúdo da nova estante (você pode personalizar conforme necessário)
-    novaEstante.innerHTML = `
-        <img class="card-img-top" src="caminho/para/imagem.jpg" alt="Capa do Livro">
-        <div class="card-body">
-            <!-- Conteúdo da estante aqui -->
-        </div>
-    `;
+//     // Conteúdo da nova estante (você pode personalizar conforme necessário)
+//     novaEstante.innerHTML = `
+//         <img class="card-img-top" src="caminho/para/imagem.jpg" alt="Capa do Livro">
+//         <div class="card-body">
+//             <!-- Conteúdo da estante aqui -->
+//         </div>
+//     `;
 
-    estanteContainer.appendChild(novaEstante);
-}
+//     estanteContainer.appendChild(novaEstante);
+// }
 
-// Array para armazenar estantes de livros
-const bookshelves = [];
+// // Array para armazenar estantes de livros
+// const bookshelves = [];
 
-// Função para criar uma nova estante de livros
-function createShelf() {
-    const newShelf = {
-        books: [] // Um array para armazenar os livros da estante
-    };
-    bookshelves.push(newShelf); // Adiciona a estante ao array de estantes
+// // Função para criar uma nova estante de livros
+// function createShelf() {
+//     const newShelf = {
+//         books: [] // Um array para armazenar os livros da estante
+//     };
+//     bookshelves.push(newShelf); // Adiciona a estante ao array de estantes
 
-    // Atualize a exibição das estantes no site
-    displayBookshelves();
-}
+//     // Atualize a exibição das estantes no site
+//     displayBookshelves();
+// }
 
-// Função para adicionar um livro a uma estante
-function addBookToShelf(shelfIndex, bookTitle) {
-    const shelf = bookshelves[shelfIndex];
-    if (shelf) {
-        shelf.books.push(bookTitle);
+// function addBookToShelf(shelfIndex, book) {
+//     const shelf = bookshelves[shelfIndex];
+//     if (shelf) {
+//         // Verifica se o livro já está na estante
+//         const isBookInShelf = shelf.books.some(existingBook => existingBook.id === book.id);
 
-        // Atualize a exibição das estantes no site
-        displayBookshelves();
-    } else {
-        console.error("Estante não encontrada.");
-    }
-}
+//         if (!isBookInShelf) {
+//             shelf.books.push(book);
+//             displayBookshelves(); // Atualiza a exibição das estantes
+//             alert('Livro adicionado à estante!');
+//         } else {
+//             alert('Livro já está na estante!');
+//         }
+//     } else {
+//         console.error("Estante não encontrada.");
+//     }
+// }
 
 // Função para exibir as estantes no site
 function displayBookshelves() {
@@ -154,7 +159,7 @@ async function searchBooks() {
   }
   
 //Adiciona a função de pesquisa do google books
-
+const estanteLivros = [];
 //Função de abrir um modal na tela
 const showBookModal = (volumeInfo)=>{
     const modal = new bootstrap.Modal(document.getElementById('bookModal'), {
@@ -198,8 +203,7 @@ const showBookModal = (volumeInfo)=>{
 //Função de abrir um modal na tela
 
 //adicionar e procurar livro a estante
-// Adicione este bloco de código ao seu script existente
-const livrosSelecionados = [];
+
 // Função para pesquisar e adicionar livro
 async function searchAndAddBook() {
     // Obtenha o valor do input de pesquisa
@@ -227,7 +231,7 @@ async function searchAndAddBook() {
 
             // Crie um item de lista para o livro
             const listItem = document.createElement('li');
-            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+            listItem.className = 'list-group-item d-flex justify-content-between align-items-center livro-item';
 
             // Crie uma imagem do livro
             const bookImage = document.createElement('img');
@@ -256,17 +260,49 @@ async function searchAndAddBook() {
             searchResults.appendChild(listItem);
 
             listItem.addEventListener('click', () => {
-                // Aqui você pode chamar a função para adicionar o livro à estante
-                // Por exemplo, adicioneBookAoEstante(volumeInfo);
-                // Lembre-se de implementar a função addBookToShelf de acordo com sua lógica
-                // addBookToShelf(index, volumeInfo.title);
-            
-                // Feche o modal após adicionar o livro
-                const modalElement = document.getElementById('addBookModal');
-                if (modalElement) {
-                    modalElement.classList.remove('show'); // Remove a classe 'show' para esconder o modal
-                    modalElement.style.display = 'none'; // Define o estilo 'display' como 'none' para ocultar o modal
+                const isBookInEstante = estanteLivros.some(existingBook => existingBook.id === book.id);
+
+                if (!isBookInEstante) {
+                    estanteLivros.push(book);
+                    alert('Livro adicionado à estante!');
+                    console.log(estanteLivros);
+                    // Atualiza a exibição da estante
+                    const estanteContainer = document.querySelector('.estantes');
+                
+
+                    estanteLivros.forEach(livro => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+
+                        const img = document.createElement('img');
+                        img.className = 'card-img-top';
+                        // img.src = livro.imageLinks.thumbnail;
+                        img.alt = 'Capa do Livro';
+                        img.alt = 'Capa do Livro';
+
+                        if (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) {
+                            img.src = volumeInfo.imageLinks.thumbnail;
+                        }else {
+                            // Adiciona um placeholder quando a capa não está disponível
+                            img.src = './public/img/istockphoto-489807343-1024x1024.jpg'; // Substitua com o caminho real do seu placeholder
+                        }
+
+                        const cardBody = document.createElement('div');
+                        cardBody.className = 'card-body';
+
+                        const p = document.createElement('p');
+                        p.textContent = livro.title;
+
+                        cardBody.appendChild(p);
+                        card.appendChild(img);
+                        card.appendChild(cardBody);
+
+                        estanteContainer.appendChild(card);
+                    });
+                } else {
+                    alert('Livro já está na estante!');
                 }
+                
             });
             
         });

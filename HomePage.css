@@ -185,6 +185,9 @@ a{
     height: 260px;
     cursor: pointer;
 }
+.livro-item {
+    cursor: pointer;
+}
 /*EStantes*/
 
 
