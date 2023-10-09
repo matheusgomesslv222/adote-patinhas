@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin: 20px;
+}
+
+input, select, button {
+    margin-right: 10px;
+}
+
+.prateleira-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+}
+
+.prateleira-section h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.prateleira-section ul {
+    list-style-type: none;
+    padding: 0;
+}
