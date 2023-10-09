@@ -150,41 +150,43 @@ a{
 }
 
 .estantes{
+    gap: 10px;
     padding: 3px;
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
     white-space: nowrap;
 }
-
+.scroll-livros{
+    gap: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    width: auto;
+}
 .card{
-    margin-right: 10px;
-    display: inline-block;
-    height: 260px;
-    margin: 15px 5px;
+    width:120px;
+    height: 190px;
 }
 
-.card img{
-   width: 150px;
-   min-height: 200px;
-   border-radius: 8px;
-}
 
+.card-img-top{
+    width:120px;
+    height: 190px;
+}
+#bookModal{
+    font-size: 4rem;
+    color: #8a9ac0;
+    text-align: center;
+    background-color: white;
+    border: 2px dashed #8a9ac0;
+    width: 120px;
+    height: 190px;
+    cursor: pointer;
+}
 #minhas-estantes i{
     display: none;
 }
 
-#add-book{
-    font-size: 4rem;
-    color: #8a9ac0;
-    text-align: center;
-    padding-bottom: 20px;
-    background-color: white;
-    border: 2px dashed #8a9ac0;
-    width: 150px;
-    height: 260px;
-    cursor: pointer;
-}
 .livro-item {
     cursor: pointer;
 }

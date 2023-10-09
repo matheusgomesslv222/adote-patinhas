@@ -267,7 +267,7 @@ async function searchAndAddBook() {
                     alert('Livro adicionado à estante!');
                     console.log(estanteLivros);
                     // Atualiza a exibição da estante
-                    const estanteContainer = document.querySelector('.estantes');
+                    const estanteContainer = document.querySelector('.scroll-livros');
                 
 
                     estanteLivros.forEach(livro => {
@@ -288,12 +288,6 @@ async function searchAndAddBook() {
                         }
 
                         const cardBody = document.createElement('div');
-                        cardBody.className = 'card-body';
-
-                        const p = document.createElement('p');
-                        p.textContent = livro.title;
-
-                        cardBody.appendChild(p);
                         card.appendChild(img);
                         card.appendChild(cardBody);
 
