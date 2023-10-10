@@ -1,18 +1,3 @@
-// function criarEstante() {
-//     const estanteContainer = document.querySelector(".estantes");
-//     const novaEstante = document.createElement("div");
-//     novaEstante.classList.add("card");
-
-//     // Conteúdo da nova estante (você pode personalizar conforme necessário)
-//     novaEstante.innerHTML = `
-//         <img class="card-img-top" src="caminho/para/imagem.jpg" alt="Capa do Livro">
-//         <div class="card-body">
-//             <!-- Conteúdo da estante aqui -->
-//         </div>
-//     `;
-
-//     estanteContainer.appendChild(novaEstante);
-// }
 
 // // Array para armazenar estantes de livros
 // const bookshelves = [];
@@ -45,7 +30,26 @@
 //         console.error("Estante não encontrada.");
 //     }
 // }
+//Função de Criar uma estante
+const createNewEstante = ()=>{
+    const newEstanteName = document.getElementById('newEstanteName').value
 
+    if(newEstanteName) {
+        const estanteContainer = document.querySelector('.estantes');
+        const newEstante = document.createElement('div');
+        newEstante.innerHTML = `
+            <div class="estantes">
+                <h3>${newEstanteName}</h3>
+                <div class="scroll-livros">
+                    <button id="bookModal" data-bs-toggle="modal" data-bs-target="#addBookModal">+</button>
+                </div>
+            </div>    
+        `
+        estanteContainer.appendChild(newEstante);
+    }else {
+        alert('Digite um nome para a nova estante')
+    }
+}
 // Função para exibir as estantes no site
 function displayBookshelves() {
     const shelvesContainer = document.getElementById("bookshelves");
@@ -277,7 +281,6 @@ async function searchAndAddBook() {
                         const img = document.createElement('img');
                         img.className = 'card-img-top';
                         // img.src = livro.imageLinks.thumbnail;
-                        img.alt = 'Capa do Livro';
                         img.alt = 'Capa do Livro';
 
                         if (volumeInfo.imageLinks && volumeInfo.imageLinks.thumbnail) {

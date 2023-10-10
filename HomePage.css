@@ -138,9 +138,20 @@ a{
 }
 
 #minhas-estantes{
-    width: calc(100% - 250px);
-    padding-top: 20px;
-    padding-left: 20px;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+}
+.barra-lateral i{
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #8a9ac0;
+    display: inline-flex;
+    cursor: pointer;
 }
 
 #minhas-estantes h3{
@@ -150,15 +161,10 @@ a{
 }
 
 .estantes{
-    gap: 10px;
-    padding: 3px;
-    width: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
+   display: flex;
+   flex-direction: column;
 }
 .scroll-livros{
-    gap: 10px;
     display: inline-flex;
     flex-direction: row;
     width: auto;
@@ -167,8 +173,6 @@ a{
     width:120px;
     height: 190px;
 }
-
-
 .card-img-top{
     width:120px;
     height: 190px;
@@ -183,9 +187,7 @@ a{
     height: 190px;
     cursor: pointer;
 }
-#minhas-estantes i{
-    display: none;
-}
+
 
 .livro-item {
     cursor: pointer;
@@ -199,9 +201,7 @@ a{
     header {
       display: none;
     }
-    .barra-lateral{
-        display: none;
-    }
+    
     #main-container{
     
         padding: 0;
@@ -221,21 +221,9 @@ a{
     }
 
     #minhas-estantes{
-        padding: 0;
         width: 100%;
     }
-    #minhas-estantes i{
-        border-radius: 8px;
-        justify-content: center;
-        align-items: center;
-        margin-left: 40px;
-        width: 40px;
-        height: 40px;
-        color: white;
-        background-color: #8a9ac0;
-        display: inline-flex;
-        cursor: pointer;
-    }
+    
     #search{
         width: auto;
     }
@@ -276,15 +264,20 @@ a{
 /*Content*/
 .Content{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 /*Barra lateral*/
 .title-minhas-estantes{
     font-size: 1.5rem;
 }
 .barra-lateral {
-    width: 250px; 
-    padding: 20px 0; 
-    border-right: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%; 
 }
 
 .barra-lateral ul {
@@ -303,9 +296,12 @@ a{
     background-color: #8a9ac0; 
     color: #fff; 
     border: none; 
-    padding: 10px 20px; 
     cursor: pointer; 
     border-radius: 4px; 
+    margin-right: 3px;
+    width: 40px;
+    height: 40px;
+    
 }
 
 .custom-button:hover {

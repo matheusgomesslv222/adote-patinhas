@@ -42,16 +42,11 @@
       <div class="Content">
         <div class="barra-lateral">
             <h2 class="title-minhas-estantes">Minhas Estantes</h2>
-            <ul>
-                <li><a href="#">Atualmente lendo</a></li> 
-                <li><a href="#">Quero ler</a></li>
-            </ul>
-            <button id="" class="custom-button">Criar Estante</button> <!--Não está funcional-->
+            <button id="custom-button" class="custom-button" data-bs-toggle="modal" data-bs-target="#addEstanteModal">+</button> <!--Não está funcional-->
         </div><!--barra-lateral-->
         <div id="minhas-estantes">
-            <h3>Estante 1</h3>
-            <i class="fa-solid fa-plus"></i>
-            <div class="estantes">
+          <div class="estantes">
+              <h3>Estante 1</h3>
                 <div class="scroll-livros">
                   <!-- <div class="card">
                     <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
@@ -60,31 +55,51 @@
                     </div>
                   </div>card -->
 
-                  <button id="bookModal" data-bs-toggle="modal" data-bs-target="#addBookModal">+</i></button>
+                  <button id="bookModal" data-bs-toggle="modal" data-bs-target="#addBookModal">+</button>
                 </div><!--scroll-livros-->
-                  <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="addBookModalLabel">Pesquisar e Adicionar Livro</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <!-- Input de pesquisa -->
-                          <input type="text" id="searchBookInput" placeholder="Digite o título do livro">
-                          
-                          <!-- Lista de livros -->
-                          <ul id="searchResults" class="list-group mt-3">
-                            <!-- Os resultados da pesquisa aparecerão aqui -->
-                          </ul>
-                          
-                          <!-- Botão de pesquisa e adição -->
-                          <button type="button" class="btn btn-primary mt-3" onclick="searchAndAddBook()">Pesquisar e Adicionar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+               
             </div><!--estantes-->
+             <!-- Adicione um novo modal para criar uma nova estante -->
+             <div class="modal fade" id="addEstanteModal" tabindex="-1" aria-labelledby="addEstanteModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addEstanteModalLabel">Nova Estante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Input para o nome da nova estante -->
+                    <input type="text" id="newEstanteName" placeholder="Digite o nome da nova estante">
+
+                    <!-- Botão para criar a nova estante -->
+                    <button type="button" class="btn btn-primary mt-3" onclick="createNewEstante()">Criar Estante</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Modal de Pesquisa dentro da Estante-->
+            <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addBookModalLabel">Pesquisar e Adicionar Livro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Input de pesquisa -->
+                    <input type="text" id="searchBookInput" placeholder="Digite o título do livro">
+                    
+                    <!-- Lista de livros -->
+                    <ul id="searchResults" class="list-group mt-3">
+                      <!-- Os resultados da pesquisa aparecerão aqui -->
+                    </ul>
+                    
+                    <!-- Botão de pesquisa e adição -->
+                    <button type="button" class="btn btn-primary mt-3" onclick="searchAndAddBook()">Pesquisar e Adicionar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div><!--minhas-estantes-->
 
       </div><!--Content-->
