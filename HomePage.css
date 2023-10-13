@@ -163,6 +163,7 @@ a{
     width: 300px;
 }
 .shelf{
+    height: 350px;
     flex-direction: column;
     display: flex;
     overflow-x: scroll;
