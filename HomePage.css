@@ -35,7 +35,10 @@ a{
     border-radius: 50%;
 }
 
-
+#estantes{
+    width: 100%;
+    display: flex;
+}
 /*Nav-bar Styles*/
 
 /*MAIN*/
@@ -321,7 +324,10 @@ a{
     border-bottom: 1px solid black;
 }
 
-
+.add-book-btn{
+    width: 130px;
+    height: 180px;
+}
 /*Capas*/
 .Capas{
     display: flex;

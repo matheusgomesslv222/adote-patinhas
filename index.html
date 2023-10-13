@@ -40,24 +40,19 @@
             <div class="divisor"></div><!--divisor-->
       </div><!--nav-bar-livros-->
       <div class="Content">
+        
         <div class="barra-lateral">
-            <h2 class="title-minhas-estantes">Minhas Estantes</h2>
-            <button id="custom-button" class="custom-button" data-bs-toggle="modal" data-bs-target="#addEstanteModal">+</button> <!--Não está funcional-->
+            <h2 class="title-minhas-estantes"><a href="./index.html">Minhas Estantes</a></h2>
+            <button id="custom-button" class="custom-button" data-bs-toggle="modal" data-bs-target="#addEstanteModal"><i class="fa-solid fa-plus"></i></button> <!--Não está funcional-->
         </div><!--barra-lateral-->
         <div id="minhas-estantes">
-          <div class="estantes">
-              <h3>Estante 1</h3>
+          <div id="estantes" class="estantes">
+              <!-- <h3>Estante 1</h3>
                 <div class="scroll-livros">
-                  <!-- <div class="card">
-                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/81K5jQelFgL._AC_UF1000,1000_QL80_.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <p>Titulo</p>
-                    </div>
-                  </div>card -->
+              
 
-                  <button id="bookModal" data-bs-toggle="modal" data-bs-target="#addBookModal">+</button>
-                </div><!--scroll-livros-->
-               
+                   <button id="bookModal" data-bs-toggle="modal" data-bs-target="#addBookModal">+</button> 
+                </div> -->
             </div><!--estantes-->
              <!-- Adicione um novo modal para criar uma nova estante -->
              <div class="modal fade" id="addEstanteModal" tabindex="-1" aria-labelledby="addEstanteModalLabel" aria-hidden="true">
@@ -77,50 +72,23 @@
                 </div>
               </div>
             </div>
-            <!--Modal de Pesquisa dentro da Estante-->
-            <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addBookModalLabel">Pesquisar e Adicionar Livro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Input de pesquisa -->
-                    <input type="text" id="searchBookInput" placeholder="Digite o título do livro">
-                    
-                    <!-- Lista de livros -->
-                    <ul id="searchResults" class="list-group mt-3">
-                      <!-- Os resultados da pesquisa aparecerão aqui -->
-                    </ul>
-                    
-                    <!-- Botão de pesquisa e adição -->
-                    <button type="button" class="btn btn-primary mt-3" onclick="searchAndAddBook()">Pesquisar e Adicionar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
         </div><!--minhas-estantes-->
-
+        <!-- Modal -->
       </div><!--Content-->
-      <!-- Modal -->
-        <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-              </div>
-              <div class="modal-body" id="modalBody">
-                <!-- O conteúdo do modal será preenchido dinamicamente com JavaScript -->
-              </div>
-              
+       <!-- Modal -->
+          <div class="modal fade" id="bookModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                    </div>
+                </div>
             </div>
           </div>
-        </div>
-
     </main><!--main-container--> 
 
 
