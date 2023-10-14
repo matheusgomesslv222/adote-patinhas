@@ -30,7 +30,7 @@
           <div class="search-bar">
             <h2><a href="./index.html">Meus Livros</a></h2>
             <form class="form">
-                    <input type="text" name="search" id="search" placeholder="Pesquise um Livro"> <!--colocar uma opção para funcionar com o botão ENTER-->
+                    <input type="text" name="search" id="search" placeholder="Pesquise um Livro" onkeydown="checkEnter(event)"> <!--colocar uma opção para funcionar com o botão ENTER-->
                     <button type="button" class="button-search" onclick="searchBooks()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
                 <div class="user">

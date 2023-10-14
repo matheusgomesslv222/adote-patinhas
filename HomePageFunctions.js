@@ -166,6 +166,16 @@ async function searchBooks() {
       }
   }
   
+  //Função para verificar a tecla "ENTER"
+  function checkEnter(event){
+    if(event.keyCode === 13){
+        //tecla "ENTER" foi pressionada, chame a função de pesquisa
+        searchBooks();
+    }
+  }
+  //FIM DA FUNÇÃO VERIFICAR A TECLA "ENTER"
+
+
 //Adiciona a função de pesquisa do google books
 const estanteLivros = [];
 //Função de abrir um modal na tela

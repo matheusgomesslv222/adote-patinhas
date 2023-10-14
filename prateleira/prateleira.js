@@ -41,7 +41,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     adicionarLivro();
 });*/
 
-function adicionarLivro() {
+/*function adicionarLivro() {
     const livroInput = document.getElementById("livro");
     const statusSelect = document.getElementById("status");
     const prateleiraId = statusSelect.value;
@@ -77,5 +77,23 @@ function adicionarLivro() {
 
     prateleira.appendChild(novoLivro);
     livroInput.value = "";
-}
+}*/
+
+// JavaScript para tornar o menu responsivo
+/*const menuButton = document.querySelector(".menu-button");
+const menu = document.querySelector(".menu ul");
+
+menuButton.addEventListener("click", () => {
+    menu.classList.toggle("show-menu");
+});
+*/
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+  menuToggle.classList.toggle("open");
+});
+
+
 
