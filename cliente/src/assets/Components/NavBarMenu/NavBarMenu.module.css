@@ -1,0 +1,60 @@
+.Toolbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.searchBar{
+    display: flex;
+}
+.searchBar .user{
+    margin-right: 40px;
+}
+.inputBase{
+    height: 40px;
+    color: black;
+    border: 1px solid;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-left: 10px;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSearch{
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #8a9ac0;
+    color: white
+}
+.user{
+    align-self: flex-end;
+}
+.user a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: #8a9ac0;
+}
+
+@media screen and (min-width: 1280px) {
+    .Toolbar{
+        margin: 0 auto;
+        width: 1024px;
+    }
+
+    .title {
+        color: black;
+        display: inline;
+    }
+}

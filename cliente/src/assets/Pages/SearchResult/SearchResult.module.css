@@ -1,0 +1,68 @@
+
+.resultados{
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+}
+.resultados h2{
+    color: #333333;
+    margin-left: 5px;
+    border-bottom: 1px solid #333333;
+}
+.livros{
+    justify-content: space-evenly;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+.livro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    width: 160px;
+    height: 230px;
+}
+.livro h3{
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardStyle{
+    width: 350px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+.buttons button{
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #333333;
+    border: none;
+    background-color: #fff;
+}
+.buttons button:hover{
+    color: #fff;
+    background-color: #8a9ac0;
+}
+@media screen and (min-width: 1280px) {
+    .resultados{
+        margin: 0 auto;
+        max-width: 1024px;
+        height: auto;
+    }
+    .livros{
+        flex-wrap: wrap;
+        margin: 20px;
+        gap: 30px;
+    }
+}

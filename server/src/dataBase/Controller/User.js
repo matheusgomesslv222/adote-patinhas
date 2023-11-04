@@ -2,13 +2,13 @@ import { openDb } from "../configDb.js";
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 
-export async function createTable(){
-    openDb().then(db=>{
-        db.exec(
-            'CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, sobrenome TEXT NOT NULL, email TEXT NOT NULL UNIQUE, senha TEXT NOT NULL, numero_telefone TEXT NOT NULL)'
-        )
-    })
-}
+// export async function createTable(){
+//     openDb().then(db=>{
+//         db.exec(
+//             'CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, sobrenome TEXT NOT NULL, email TEXT NOT NULL UNIQUE, senha TEXT NOT NULL, numero_telefone TEXT NOT NULL)'
+//         )
+//     })
+// }
 
 export async function insertUsuario(usuario){
      usuario = usuario.body

@@ -1,0 +1,45 @@
+
+.estante h3{
+    color: #333333;
+      width: 50%;
+      margin-left: 25px;
+      border-bottom: 1px solid #333333;
+  }
+  .scrollLivros{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 100%;
+      gap: 5px;
+      padding: 10px;
+  }
+  
+  .livro{
+      margin-bottom: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 160px;
+      max-height: 400px;
+      cursor: pointer;
+  }
+  .livro h4{
+      color: #333333;
+      width: 100%;
+      margin-top: 5px;
+  }
+  
+  @media screen and (min-width: 1280px) {
+      .scrollLivros {
+          justify-content: flex-start; /* Alinhe à esquerda para evitar centralização */
+        }
+      
+        .livro {
+          max-width: calc(20% - 10px); /* Defina a mesma largura para manter 5 livros por linha */
+        }
+        .estante h3{
+          margin-left: 10px;
+        }
+  }
