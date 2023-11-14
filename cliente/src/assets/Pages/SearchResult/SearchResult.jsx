@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext } from 'react';
 import {
   Button,
   Modal,
@@ -14,7 +14,7 @@ import NavBarMenu from '../../Components/NavBarMenu/NavBarMenu'
 import style from './SearchResult.module.css';
 import placeholder from '../../../../public/images/placeholder.jpg';
 import { useSearch } from '../../../SearchContext';
-import { useLocation } from 'react-router-dom';
+import Axios from 'axios'
 
 const imageStyle = {
     width: '160px', // Largura desejada
@@ -27,9 +27,35 @@ const modalStyle = {
     justifyContent: 'center',
 };
 
+const btn = {
+  marginBottom : '5px',
+  color: '#8a9ac0',
+  border: '1px solid #8a9ac0',
+    '&:hover': {
+      color: '#081b32f1',
+      backgroundColor: '#081b32f1', // Cor de fundo quando o cursor está sobre o botão
+    },
+}
 export default function SearchResult() {
   const { searchResults : books} = useSearch();
   const [ selectedBook , setSelectedBook] = useState(null)
+  const [isListEstantesModalOpen, setListEstantesModalOpen] = useState(false);
+  const [estantes, setEstantes] = useState([]);
+
+  const handleOpenListEstantesModal = async () => {
+    try {
+      const response = await Axios.get('http://localhost:3000/estantes');
+      setEstantes(response.data);
+      console.log('res', response.data)
+      setListEstantesModalOpen(true);
+    } catch (error) {
+      console.error('Erro ao carregar estantes', error);
+    }
+  };
+
+  const handleCloseListEstantesModal = () => {
+    setListEstantesModalOpen(false);
+  };
 
   const handleOpen = (book) =>{
     setSelectedBook(book);
@@ -38,6 +64,32 @@ export default function SearchResult() {
   const handleClose = () =>{
     setSelectedBook(null)
   }
+  
+  const listEstantes = () => {
+    handleOpenListEstantesModal();
+  };
+  const handleAddToEstante = async (estanteNome) => {
+    try {
+      // Enviar solicitação à API para adicionar o livro à estante
+      await Axios.post('http://localhost:3000/adicionarLivroAEstante', {
+        livro: selectedBook, // Envie o livro selecionado
+        estanteNome: estanteNome,
+      });
+  
+      // Fechar o modal de estantes após adicionar o livro
+      handleCloseListEstantesModal();
+  
+      // Exibir uma mensagem de sucesso ou atualizar a interface de acordo
+      console.log(`Livro adicionado à estante: ${estanteNome}`);
+    } catch (error) {
+      console.error('Erro ao adicionar livro à estante', error);
+    }
+  };
+
+  useEffect(() => {
+    // Carregar as estantes quando o componente montar
+    handleOpenListEstantesModal();
+  }, []); // A dependência vazia garante que este efeito só é executado uma vez, ao montar o componente
 
   return (
     <>
@@ -54,7 +106,10 @@ export default function SearchResult() {
                     style={imageStyle}
                     />
                     <h3>{book.volumeInfo?.title || 'Título não disponível'}</h3>
-                    <Button variant="outlined" color="primary" onClick={() => handleOpen(book)}>
+                    <Button style={btn} onClick={handleOpenListEstantesModal}>
+                      Adicionar
+                    </Button>
+                    <Button style={btn} onClick={() => handleOpen(book)}>
                       Ver Detalhes
                     </Button>
                 </div>
@@ -94,6 +149,38 @@ export default function SearchResult() {
                 </CardContent>
               </Card>
             )}
+          </div>
+        </Fade>
+      </Modal>
+
+      {/* ADD ESTANTE */}
+      <Modal
+        open={isListEstantesModalOpen}
+        onClose={handleCloseListEstantesModal}
+        closeAfterTransition
+        style={modalStyle}
+      >
+        <Fade in={isListEstantesModalOpen}>
+          <div className={style.cardStyle}>
+            {/* Conteúdo do modal para listEstantes */}
+            <Card>
+              <CardContent>
+                <Typography variant="h5">
+                  Estantes Disponíveis
+                </Typography>
+                {estantes.map(estante => (
+                  <div key={estante.EstanteID} style={{ marginBottom: '5px'}}>
+                  <Button
+                    style={{ ...btn, width: '100%', height: '50px', fontSize:'1.2rem' }}
+                    onClick={() => handleAddToEstante(estante.EstanteID)}
+                  >
+                    {estante.NomeEstante}
+                  </Button>
+
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
           </div>
         </Fade>
       </Modal>
