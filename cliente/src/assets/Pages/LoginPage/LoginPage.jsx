@@ -3,7 +3,7 @@ import styles from './LoginPage.module.css'
 import imageRegister from '../../../../public/images/image-register.svg'
 import LoginForm from '../../Components/LoginForm/LoginForm'
 
-export default function RegisterPage() {
+export default function LoginPage() {
     
   return (
     <div className={styles.main}>

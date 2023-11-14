@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     background-color: #596778;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 .container{
     margin: 0 auto;
+    margin-bottom: 150px;
     padding-top: 50px;
 }
 .formImage img{
