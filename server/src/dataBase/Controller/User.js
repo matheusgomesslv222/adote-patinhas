@@ -25,10 +25,12 @@ export async function authUser(req, res){
         email : req.body.email,
         senha : req.body.senha
     }
+    console.log(usuario)
     await openDb().then(db=>{
         db.get('SELECT * FROM User WHERE email=? AND senha=?', [usuario.email , usuario.senha])
         .then(row => {
             if(row){
+                console.log('Usuario Autheticado')
                 const token = jwt.sign({ email: usuario.email }, secretKey, { expiresIn: '1h' });
 
                 res.status(200).json({message: 'Auth bem-sucedida', token});

@@ -1,68 +1,72 @@
-
-.resultados{
-    padding-top: 20px;
-    width: 100%;
-    height: auto;
-}
-.resultados h2{
-    color: #333333;
-    margin-left: 5px;
-    border-bottom: 1px solid #333333;
-}
-.livros{
-    justify-content: space-evenly;
-    gap: 10px;
+.main{
     display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 150px;
+    justify-content: center;
+    background-color: #596778;
+    height: auto;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.container{
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.formImage img{
+    width: 100%;
+    max-height: 300px;
 }
 .livro{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
+    flex-direction: column;
     width: 160px;
-    height: 230px;
+    height: 300px;
 }
-.livro h3{
-    color: #333333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.livros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.title {
+    max-width: 100%; /* Garante que o título não ultrapasse a largura da div */
+    overflow: hidden; /* Impede que o texto ultrapasse os limites da div */
+    text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto ultrapassa a largura */
+    white-space: nowrap; /* Impede quebras de linha para manter o título em uma linha */
+  }
+.buttons{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cardStyle{
-    width: 350px;
-    max-height: 700px;
-    overflow-y: auto;
-}
-.buttons{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px 0;
-}
-.buttons button{
-    padding: 10px;
-    font-size: 1.1rem;
-    color: #333333;
-    border: none;
-    background-color: #fff;
-}
-.buttons button:hover{
-    color: #fff;
-    background-color: #8a9ac0;
+    width: 300px;
 }
 @media screen and (min-width: 1280px) {
     .resultados{
         margin: 0 auto;
-        max-width: 1024px;
-        height: auto;
+        height: 100vh;
+        width: 1024px;
+        
     }
-    .livros{
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+    .formImage img{
+        width: 100%;
+        max-height: 500px;
+    }
+    .cardStyle{
+        width: 400px;
+        display: flex;
         flex-wrap: wrap;
-        margin: 20px;
-        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        height: 99vh;
+    
+        overflow-y: auto;
     }
 }

@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { createTable , insertUsuario , authUser } from './dataBase/Controller/User.js';
+import { insertUsuario , authUser } from './dataBase/Controller/User.js';
+import { newEstante , estantes, adicionarLivroEstante} from './dataBase/Controller/Estante.js';
 
 const router = Router();
 
@@ -16,4 +17,7 @@ const user = {
 router.post('/login', authUser);
 router.post('/cadastro-usuario', insertUsuario);
 
+router.post('/estante', newEstante);
+router.post('/adicionarLivroAEstante', adicionarLivroEstante);
+router.get('/estantes', estantes);
 export default router;
