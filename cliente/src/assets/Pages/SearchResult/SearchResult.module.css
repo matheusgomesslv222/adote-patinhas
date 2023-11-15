@@ -5,6 +5,7 @@
     height: auto;
     width: 100%;
     padding-bottom: 100px;
+
 }
 .container{
     margin: 0 auto;
@@ -14,19 +15,83 @@
     width: 100%;
     max-height: 300px;
 }
+.livro{
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 300px;
+}
+.livros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.title {
+    max-width: 100%; /* Garante que o título não ultrapasse a largura da div */
+    overflow: hidden; /* Impede que o texto ultrapasse os limites da div */
+    text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto ultrapassa a largura */
+    white-space: nowrap; /* Impede quebras de linha para manter o título em uma linha */
+  }
+.buttons{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardStyle{
+    width: 300px;
+=======
+}
+.container{
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.formImage img{
+    width: 100%;
+    max-height: 300px;
+
+}
 
 @media screen and (min-width: 1280px) {
+
+    .resultados{
+        margin: 0 auto;
+        height: 100vh;
+        width: 1024px;
+        
+
     .main{
         height: 100vh;
+
     }
     .container{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 100px;
+
     }
     .formImage img{
         width: 100%;
         max-height: 500px;
     }
+    .cardStyle{
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 99vh;
+    
+        overflow-y: auto;
+    }
+
+    }
+    .formImage img{
+        width: 100%;
+        max-height: 500px;
+    }
+
 }
