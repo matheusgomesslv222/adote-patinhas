@@ -41,13 +41,17 @@ export default function SearchResult() {
   const [ selectedBook , setSelectedBook] = useState(null)
   const [isListEstantesModalOpen, setListEstantesModalOpen] = useState(false);
   const [estantes, setEstantes] = useState([]);
+
   const [selectedBookInfo, setSelectedBookInfo] = useState(null);
+
 
   const handleOpenListEstantesModal = async () => {
     try {
       const response = await Axios.get('http://localhost:3000/estantes');
       setEstantes(response.data);
       console.log('res', response.data)
+      setListEstantesModalOpen(true);
+
     } catch (error) {
       console.error('Erro ao carregar estantes', error);
     }
@@ -62,6 +66,7 @@ export default function SearchResult() {
     setSelectedBookInfo(book)
   }
 
+
   const handleOpen = (book) =>{
     setSelectedBook(book);
     setSelectedBookInfo(book);
@@ -71,6 +76,7 @@ export default function SearchResult() {
     setSelectedBook(null)
   }
   
+
   const handleAddToEstante = async (estanteID) => {
     console.log('Id da estante', estanteID);
     console.log('seu livro:' ,selectedBookInfo.volumeInfo)
@@ -79,6 +85,16 @@ export default function SearchResult() {
       await Axios.post('http://localhost:3000/adicionarLivroAEstante', {
         livro: selectedBookInfo, // Envie o livro selecionado
         estanteID: estanteID,
+=======
+  const listEstantes = () => {
+    handleOpenListEstantesModal();
+  };
+  const handleAddToEstante = async (estanteNome) => {
+    try {
+      // Enviar solicitação à API para adicionar o livro à estante
+      await Axios.post('http://localhost:3000/adicionarLivroAEstante', {
+        livro: selectedBook, // Envie o livro selecionado
+        estanteNome: estanteNome,
       });
   
       // Fechar o modal de estantes após adicionar o livro
@@ -110,9 +126,14 @@ export default function SearchResult() {
                     alt={book.volumeInfo?.title || 'Título não disponível'}
                     style={imageStyle}
                     />
+
                     {/* <h3 className={style.title}>{book.volumeInfo?.title || 'Título não disponível'}</h3> */}
                     <div className={style.buttons}>
                     <Button style={btn} onClick={() => modalAddOpen(book)}>
+
+                    <h3>{book.volumeInfo?.title || 'Título não disponível'}</h3>
+                    <Button style={btn} onClick={handleOpenListEstantesModal}>
+
                       Adicionar
                     </Button>
                     <Button style={btn} onClick={() => handleOpen(book)}>
@@ -179,7 +200,12 @@ export default function SearchResult() {
                   <div key={estante.EstanteID} style={{ marginBottom: '5px'}}>
                   <Button
                     style={{ ...btn, width: '100%', height: '50px', fontSize:'1.2rem' }}
+
                     onClick={() => handleAddToEstante(estante.EstanteID)}>
+
+                    onClick={() => handleAddToEstante(estante.EstanteID)}
+                  >
+
                     {estante.NomeEstante}
                   </Button>
 
