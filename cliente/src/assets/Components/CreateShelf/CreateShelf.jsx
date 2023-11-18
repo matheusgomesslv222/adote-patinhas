@@ -4,6 +4,14 @@ import styles from './CreateShelf.module.css'
 import AddIcon from '@mui/icons-material/Add';
 import Axios from 'axios';
 
+
+const modalStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
 export default function CreateShelf() {
   const [isAddShelfModalOpen, setAddShelfModalOpen] = useState(false);
   const [newShelfName, setNewShelfName] = useState('');
@@ -34,10 +42,10 @@ export default function CreateShelf() {
         <h2>Minhas Estantes</h2>
         <button className={styles.addShelf} onClick={handleOpenAddShelfModal}><AddIcon/></button>
         {/* Modal para adicionar estante */}
-      <Modal open={isAddShelfModalOpen} onClose={handleCloseAddShelfModal}>
+      <Modal open={isAddShelfModalOpen} onClose={handleCloseAddShelfModal} style={modalStyle}>
         <Fade in={isAddShelfModalOpen}>
           <div>
-            <Card>
+            <Card className={styles.card}>
               <CardContent>
                 <Typography variant="h5">Nova Estante</Typography>
                 <TextField

@@ -46,18 +46,20 @@ export async function estantes (req, res){
 
   export async function adicionarLivroEstante(req, res) {
     const { livro, estanteID } = req.body;
-    console.log('seu livro: ', livro.volumeInfo.title)
+    console.log('seu livro: ', livro.volumeInfo.title);
     const Titulo = livro.volumeInfo.title
     const Autor = livro.volumeInfo.authors[0]
     const Descricao = livro.volumeInfo.description
     const livroCod = livro.id;
+    const img = livro.volumeInfo.imageLinks.thumbnail;
+
     console.log('SEU ID: ',estanteID)
     const db = await openDb();
     try {
         // Inserir o livro na tabela de livros
         const result = await db.run(
-            'INSERT INTO Livro (Titulo , Autor, Descricao, EstanteID, livroCod) VALUES (?, ?, ?, ?, ?)',
-            [Titulo, Autor,Descricao, estanteID , livroCod]
+            'INSERT INTO Livro (Titulo , Autor, Descricao, EstanteID, livroCod, img ) VALUES (?, ?, ?, ?, ?, ?)',
+            [Titulo, Autor,Descricao, estanteID , livroCod, img]
         );
 
         // Verificar se a inserção foi bem-sucedida
@@ -70,4 +72,17 @@ export async function estantes (req, res){
         console.error('Erro ao adicionar livro à estante:', error);
         return { success: false, message: 'Erro interno no servidor.' };
     }
+}
+
+export async function livrosEstante(req, res) {
+  
+  const { estanteID } = req.params; // Obtenha o parâmetro estanteID da URL
+  try {
+    const db = await openDb();
+    const livros = await db.all('SELECT * FROM Livro WHERE EstanteID = ?', [estanteID]);
+    res.status(200).json(livros);
+  } catch (error) {
+    console.error('Erro ao buscar livros da estante:', error);
+    res.status(500).json({ message: 'Erro interno no servidor' });
+  }
 }

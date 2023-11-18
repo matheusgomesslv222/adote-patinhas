@@ -40,8 +40,10 @@
 }
 
 .cardStyle{
-    width: 300px;
+    width: 300px;   
 }
+
+
 @media screen and (min-width: 1280px) {
     .resultados{
         margin: 0 auto;

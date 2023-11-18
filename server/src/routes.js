@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { insertUsuario , authUser } from './dataBase/Controller/User.js';
-import { newEstante , estantes, adicionarLivroEstante} from './dataBase/Controller/Estante.js';
+import { newEstante , estantes, adicionarLivroEstante ,livrosEstante } from './dataBase/Controller/Estante.js';
 
 const router = Router();
 
@@ -19,5 +19,9 @@ router.post('/cadastro-usuario', insertUsuario);
 
 router.post('/estante', newEstante);
 router.post('/adicionarLivroAEstante', adicionarLivroEstante);
+
+
 router.get('/estantes', estantes);
+// Rota para buscar livros de uma estante específica
+router.get('/livrosEstante/:estanteID', livrosEstante);
 export default router;

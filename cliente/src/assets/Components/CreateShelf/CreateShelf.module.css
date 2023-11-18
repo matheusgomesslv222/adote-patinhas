@@ -22,3 +22,18 @@ h2{
     width: 40px;
     height: 40px;
 }
+
+.card{
+    display: flex;
+    width: 250px;
+    height: 200px;
+}
+
+.card button{
+    color: #596778;
+    margin: 30px 5px;
+}
+.card button:hover{
+    color: white;
+    background-color: #596778;
+}
