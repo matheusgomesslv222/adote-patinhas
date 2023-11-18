@@ -9,12 +9,13 @@ import {
   CardContent,
   CardMedia,
 } from '@mui/material';
-import HeaderBar from '../../Components/HeaderBar/HeaderBar'
-import NavBarMenu from '../../Components/NavBarMenu/NavBarMenu'
+import HeaderBar from '../../Components/HeaderBar/HeaderBar';
+import NavBarMenu from '../../Components/NavBarMenu/NavBarMenu';
+import Footer from '../../Components/Footer/Footer';
 import style from './SearchResult.module.css';
 import placeholder from '../../../../public/images/placeholder.jpg';
 import { useSearch } from '../../../SearchContext';
-import Axios from 'axios'
+import Axios from 'axios';
 
 const imageStyle = {
     width: '160px', // Largura desejada
@@ -101,7 +102,8 @@ export default function SearchResult() {
         <HeaderBar/>
         <NavBarMenu/>
         <div className={style.resultados}>
-            <h2>Resultados</h2>
+
+           <h2>Resultados</h2>
             <div className={style.livros}>
                 {books.map((book) => (
                 <div className={style.livro} key={book.id}>
@@ -122,8 +124,10 @@ export default function SearchResult() {
                 </div>
                 ))}
             </div>
-            
         </div>
+        <Footer/>
+
+        
 
         {/* Modal */}
       <Modal
@@ -190,6 +194,8 @@ export default function SearchResult() {
           </div>
         </Fade>
       </Modal>
+
+      
     </>
   )
 }

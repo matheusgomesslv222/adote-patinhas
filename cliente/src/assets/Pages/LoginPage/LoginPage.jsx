@@ -6,6 +6,7 @@ import LoginForm from '../../Components/LoginForm/LoginForm'
 export default function LoginPage() {
     
   return (
+    <>
     <div className={styles.main}>
         <div className={styles.container}>
             <div className={styles.formImage}>
@@ -15,6 +16,8 @@ export default function LoginPage() {
                 <LoginForm />
             </div>
         </div>
+        
     </div>
+    </>
   )
 }

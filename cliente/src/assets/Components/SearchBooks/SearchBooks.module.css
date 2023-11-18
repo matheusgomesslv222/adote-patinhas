@@ -13,7 +13,7 @@
 .inputBase{
     height: 40px;
 
-    border: 1px solid #8a9ac0;
+    border: 1px solid #596778;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     padding-left: 10px;
@@ -30,7 +30,7 @@
     border: none;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    background-color: #8a9ac0;
+    background-color: #596778;
     color: white
 }
 .user{
@@ -45,7 +45,7 @@
     border-radius: 20px;
     color: white;
     text-decoration: none;
-    background-color: #8a9ac0;
+    background-color: #596778;
 }
 .pesquisa{
     display: flex;

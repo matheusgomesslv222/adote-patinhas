@@ -1,0 +1,72 @@
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #596778;
+    color: #fff;
+    padding: 30px 15px;
+  }
+  
+  
+  .footerInfo {
+    display: flex;
+    
+    flex-wrap: wrap;
+  }
+  
+  .contactInfo, .socialMedia {
+    flex: 1 1 calc(50% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+    text-align: left; /* Alinhamento à esquerda */
+  }
+  
+  .contactInfo h3, .socialMedia h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 8px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .teamMembers {
+    text-align: right;
+    margin-top: 30px;
+  
+    
+  }
+  
+  .teamMembers h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .member {
+    color: #ddd;
+    font-size: 14px;
+    text-align: right;
+  }
+
+@media screen and (min-width: 1280px) {
+    footer{
+        justify-content: space-between;
+    }
+    
+}

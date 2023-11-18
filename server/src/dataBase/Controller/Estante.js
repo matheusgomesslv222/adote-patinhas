@@ -86,3 +86,25 @@ export async function livrosEstante(req, res) {
     res.status(500).json({ message: 'Erro interno no servidor' });
   }
 }
+
+
+export async function deletarLivro(req, res) {
+  const { livroId } = req.params;
+
+  try {
+    const db = await openDb();
+
+    // Lógica para deletar o livro com base no ID
+    const result = await db.run('DELETE FROM Livro WHERE LivroID = ?', [livroId]);
+
+    // Verificar se a exclusão foi bem-sucedida
+    if (result.changes > 0) {
+      res.status(200).json({ success: true, message: 'Livro deletado com sucesso.' });
+    } else {
+      res.status(404).json({ success: false, message: 'Livro não encontrado.' });
+    }
+  } catch (error) {
+    console.error('Erro ao deletar livro:', error);
+    res.status(500).json({ success: false, message: 'Erro interno no servidor.' });
+  }
+}
