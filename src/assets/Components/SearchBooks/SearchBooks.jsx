@@ -12,6 +12,9 @@ export default function SearchBooks() {
   const [query, setQuery] = useState('');
   const navigate = useNavigate()
 
+  const sair = () =>{
+    navigate('/login')
+  }
 
   async function searchBooks() {
     if (!query) return //verifica consulta vazia
@@ -56,7 +59,7 @@ export default function SearchBooks() {
             />
             <button className={styles.btnSearch} onClick={searchBooks}><SearchIcon/></button>
             </div>
-          
+          <button className={styles.btnSair} onClick={sair}>SAIR</button>
          </div>{/* searchBar */}
     </>
   )

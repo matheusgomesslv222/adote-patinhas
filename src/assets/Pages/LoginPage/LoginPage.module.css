@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    justify-content: center;
+    background-color: #596778;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding-top: 50px;
+}
+.formImage img{
+    width: 100%;
+    max-height: 300px;
+}
+
+@media screen and (min-width: 1280px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+    .formImage img{
+        width: 100%;
+        max-height: 500px;
+    }
+}

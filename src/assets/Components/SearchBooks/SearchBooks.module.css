@@ -33,6 +33,15 @@
     background-color: #596778;
     color: white
 }
+.btnSair{
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #596778;
+    color: white
+}
 .user{
     align-self: flex-end;
 }
