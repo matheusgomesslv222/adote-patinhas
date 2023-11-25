@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Link, Routes, Outlet } from 'react-router-dom';
 import { SearchProvider } from './SearchContext'
 import HomePage from './assets/Pages/HomePage/HomePage'
 import SearchResult from './assets/Pages/SearchResult/SearchResult';
-import LoginPage from './assets/Pages/LoginPage/LoginPage'
-import RegisterPage from './assets/Pages/RegisterPage/RegisterPage';
+
 
 function App() {
 
@@ -12,8 +11,8 @@ function App() {
     <SearchProvider>
     <BrowserRouter>
       <Routes>
-        
         <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/results" element={<SearchResult/>} />
       </Routes>
     </BrowserRouter>
