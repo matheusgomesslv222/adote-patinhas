@@ -29,7 +29,8 @@
 O projeto "BookMapper" tem como objetivo proporcionar aos usuários uma solução eficaz para unificar o conhecimento de sua biblioteca em um único sistema. Utilizando uma pesquisa avançada, nossa plataforma permite que os usuários consultem uma ampla variedade de tópicos, tornando mais fácil xplorar e acessar o vasto acervo de informações disponíveis.
 
 
-## Link do [FIGMA] ([https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670%3A107&mode=design&t=ukmo8QEMxyF7YBZ6-1](https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670-107&mode=design)https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670-107&mode=design)
+## Link do [LAYOUT FOI MODIFICADO CONFORME O DESENVOLVIMENTO] [FIGMA] ([https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670%3A107&mode=design&t=ukmo8QEMxyF7YBZ6-1](https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670-107&mode=design)https://www.figma.com/file/bXFVBccHGL9JKP3WShlBHL/Book-Mapper?type=design&node-id=759670-107&mode=design)
+        
         
 
 
