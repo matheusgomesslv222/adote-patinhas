@@ -67,11 +67,11 @@ export default function RegisterForm() {
         <Form>
           <div className={styles.formHeader}>
             <div className={styles.title}>
-              <h1>Login</h1>
+              <h1>Cadastrar</h1>
             </div>
             <div className={styles.loginButton}>
               <button className={styles.registerBtn} onClick={registerRedirect}>
-                Cadastrar
+                Login
               </button>
             </div>
           </div>
