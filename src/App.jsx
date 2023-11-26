@@ -13,10 +13,10 @@ function App() {
     <SearchProvider>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/results" element={<SearchResult/>} />
+        <Route path="book-mapper/" element={<RegisterPage />} />
+        <Route path="book-mapper/login" element={<LoginPage />} />
+        <Route path="book-mapper/home" element={<HomePage />} />
+        <Route path="book-mapper/results" element={<SearchResult/>} />
       </Routes>
     </BrowserRouter>
     </SearchProvider>

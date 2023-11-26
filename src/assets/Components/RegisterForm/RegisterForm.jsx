@@ -9,7 +9,7 @@ export default function RegisterForm() {
   const navigate = useNavigate();
 
   const registerRedirect = () => {
-    navigate('/login');
+    navigate('/book-mapper/login');
   };
 
   const handleSubmit = async (values, { setSubmitting }) => {
