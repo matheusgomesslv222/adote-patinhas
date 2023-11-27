@@ -13,7 +13,7 @@ export default function SearchBooks() {
   const navigate = useNavigate()
 
   const sair = () =>{
-    navigate('/book-mapper/login')
+    navigate('/login')
   }
 
   async function searchBooks() {
@@ -27,7 +27,7 @@ export default function SearchBooks() {
         const books = response.data.items;
         console.log('seu resultado', books)
         setSearchResults(books)
-        navigate('/book-mapper/results')
+        navigate('/results')
       } catch (error) {
         console.error('Erro ao chamar a API do GOOGLE BOOKS', error);
       }

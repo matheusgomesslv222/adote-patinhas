@@ -5,7 +5,7 @@ export default function HeaderBar() {
   
   return (
     <div className={style.HomeBar}>
-      <Link to="/book-mapper/home" className={style.link}><h1>Book Mapper</h1></Link>
+      <Link to="/home" className={style.link}><h1>Book Mapper</h1></Link>
     </div>
   )
 }

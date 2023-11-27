@@ -9,7 +9,7 @@ export default function LoginForm() {
     const navigate = useNavigate()
 
     const registerRedirect = () =>{
-        navigate('/book-mapper/')
+        navigate('/')
     }
 
     
@@ -18,7 +18,7 @@ export default function LoginForm() {
               email: values.email,
               senha: values.senha,
             }).then((response) => {
-                navigate('/book-mapper/home')
+                navigate('/home')
             });
 
     }
